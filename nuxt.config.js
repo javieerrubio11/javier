@@ -34,5 +34,10 @@ module.exports = {
         })
       }
     }
-  }
+  },
+
+  plugins: [
+    '~/plugins/fullpage',
+    '~/plugins/vuetify'
+  ]
 }
