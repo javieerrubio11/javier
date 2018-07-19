@@ -1,4 +1,7 @@
 import Vue from 'vue'
-//import fullPage from 'FullPage';
-//
-//Vue.component('full-page', fullPage.default);
+import fullPage from 'vue-fullPage.js';
+
+import 'vue-fullpage.js/dist/mixin.min.js';
+import 'vue-fullpage.js/dist/build.min.js';
+
+Vue.component('full-page', fullPage);
