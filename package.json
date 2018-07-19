@@ -13,17 +13,20 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "css-loader": "^1.0.0",
     "fullpage.js": "^3.0.1",
     "nuxt": "^1.0.0",
     "vue-fullpage.js": "0.0.1",
     "vuetify": "^1.1.6"
   },
   "devDependencies": {
+    "@mdi/font": "^2.5.94",
     "babel-eslint": "^8.2.1",
-    "vue-loader": "^13.6.0",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "material-design-icons-iconfont": "^3.0.3",
+    "vue-loader": "^13.6.0"
   }
 }

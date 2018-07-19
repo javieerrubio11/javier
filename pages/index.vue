@@ -1,7 +1,5 @@
 <template>
-  <v-app>
-
-    <v-btn color="success">Success</v-btn>
+  <div>
 
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section">
@@ -22,12 +20,11 @@
           <h3>Section 3</h3>
       </div>
     </full-page>
-  </v-app>
+
+  </div>
 </template>
 
 <script>
-//import AppLogo from '~/components/AppLogo.vue'
-
 export default {
 
   components: {
@@ -37,7 +34,8 @@ export default {
     return {
       options: {
         navigation: true,
-        anchors: ['page1', 'page2', 'page3'],
+        paddingTop: '60px',
+        anchors: ['page111', 'page2', 'page3'],
         sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab']
       },
     }
