@@ -2,12 +2,19 @@
   <span>
     <h2 class="pb-4">Skills</h2>
 
+    <v-text-field
+      label="Search..."
+      prepend-icon="search"
+      color="white"
+      v-model="search"
+    ></v-text-field>
+
     <v-layout>
       <v-flex xs6>
         <h3 class="py-2">Front</h3>
         <v-layout wrap>
           <v-chip outline color="white"
-          v-for="(item, index) in skills" :key="index"
+          v-for="(item, index) in filterName(skills, search)" :key="index"
           class=""
           v-if="item.type == 'f'">
             <v-avatar>
@@ -16,6 +23,7 @@
             <span class="px-2">
               {{item.name}}
             </span>
+            <!--<v-icon right>add</v-icon>-->
           </v-chip>
         </v-layout>
       </v-flex>
@@ -23,7 +31,7 @@
         <h3 class="py-2">Back</h3>
         <v-layout wrap>
           <v-chip outline color="white"
-          v-for="(item, index) in skills" :key="index"
+          v-for="(item, index) in filterName(skills, search)" :key="index"
           class=""
           v-if="item.type == 'b'">
             <v-avatar>
@@ -44,6 +52,7 @@ export default {
 
   data() {
     return {
+      search: '',
       skills: [
         { name: 'Java', level: 5, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'PHP', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
@@ -54,7 +63,7 @@ export default {
         { name: 'WSDL', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'GIT', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'SQL', level: 5, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
-        
+
         { name: 'HTML5', level: 4, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'CSS3', level: 4, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'Sass', level: 3, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
@@ -65,6 +74,16 @@ export default {
         { name: 'AngularJs', level: 4, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
       ],
     }
+  },
+
+  methods: {
+    filterName: function (items, text) {
+      console.log(items, text);
+      return items.filter(function (item) {
+        if(text == null || text == '' || item.name == null) return true;
+        return (item.name.toLowerCase().search(text.toLowerCase()) < 0) ? false : true;
+      })
+    },
   },
 }
 </script>
