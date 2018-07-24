@@ -34,7 +34,7 @@
           v-for="(item, index) in filterName(skills, search)" :key="index"
           class=""
           v-if="item.type == 'b'">
-            <v-avatar>
+            <v-avatar class="white">
               <img :src="item.image" :alt="item.name">
             </v-avatar>
             <span class="px-2">
@@ -54,7 +54,7 @@ export default {
     return {
       search: '',
       skills: [
-        { name: 'Java', level: 5, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
+        { name: 'Java', level: 5, type: 'b', image: 'image/skills/java.png' },
         { name: 'PHP', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'Laravel', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'Spring', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
@@ -78,7 +78,6 @@ export default {
 
   methods: {
     filterName: function (items, text) {
-      console.log(items, text);
       return items.filter(function (item) {
         if(text == null || text == '' || item.name == null) return true;
         return (item.name.toLowerCase().search(text.toLowerCase()) < 0) ? false : true;
