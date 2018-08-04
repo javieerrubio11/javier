@@ -15,14 +15,14 @@
         <v-layout wrap>
           <v-chip outline color="white"
           v-for="(item, index) in filterName(skills, search)" :key="index"
-          class=""
+          class="mx-2"
           v-if="item.type == 'f'">
             <v-avatar>
               <img :src="item.image" :alt="item.name">
             </v-avatar>
-            <span class="px-2">
+            <h3 class="px-2">
               {{item.name}}
-            </span>
+            </h3>
             <!--<v-icon right>add</v-icon>-->
           </v-chip>
         </v-layout>
@@ -32,14 +32,14 @@
         <v-layout wrap>
           <v-chip outline color="white"
           v-for="(item, index) in filterName(skills, search)" :key="index"
-          class=""
+          class="mx-2"
           v-if="item.type == 'b'">
             <v-avatar class="white">
               <img :src="item.image" :alt="item.name">
             </v-avatar>
-            <span class="px-2">
+            <h3 class="px-2">
               {{item.name}}
-            </span>
+            </h3>
           </v-chip>
         </v-layout>
       </v-flex>
@@ -64,6 +64,7 @@ export default {
         { name: 'GIT', level: 4, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'SQL', level: 5, type: 'b', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
 
+        { name: 'JavaScript', level: 4, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'HTML5', level: 4, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'CSS3', level: 4, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
         { name: 'Sass', level: 3, type: 'f', image: 'https://randomuser.me/api/portraits/men/35.jpg' },
