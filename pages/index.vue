@@ -31,15 +31,9 @@
         </v-container>
       </div>
       <div class="section">
-        <div class="slide">
-            <h3>Slide 2.1</h3>
-        </div>
-        <div class="slide">
-            <h3>Slide 2.2</h3>
-        </div>
-        <div class="slide">
-            <h3>Slide 2.3</h3>
-        </div>
+        <v-container>
+          <Experiencie/>
+        </v-container>
       </div>
       <div class="section">
         <v-container>
@@ -54,11 +48,12 @@
 <script>
 import Skill from '~/components/Skill.vue'
 import Certification from '~/components/Certification.vue'
+import Experiencie from '~/components/Experiencie.vue'
 
 export default {
 
   components: {
-    Skill, Certification
+    Skill, Certification, Experiencie
   },
 
   data() {

@@ -1,12 +1,12 @@
 <template>
   <span>
-    <div class="display-4 pb-4">Certification</div>
+    <div class="display-3 py-4">Certification</div>
 
     <v-layout>
       <v-flex></v-flex>
       <v-flex>
-        <v-layout align-center wrap class="py-3" v-for="item in certification" :key="item">
-          <v-flex xs12 sm4 md4 lg3>
+        <v-layout align-center wrap class="py-3" v-for="(item, index) in certification" :key="index">
+          <v-flex xs12 sm4 md4 lg3 class="hidden-xs-only">
             <v-avatar size="150" tile>
               <img class="" :src="item.image" alt="avatar">
             </v-avatar>

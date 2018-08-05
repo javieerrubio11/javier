@@ -1,6 +1,6 @@
 <template>
   <span>
-    <h2 class="pb-4">Skills</h2>
+    <div class="display-3 py-4">Skills</div>
 
     <v-text-field
       label="Search..."
@@ -11,8 +11,8 @@
 
     <v-layout>
       <v-flex xs6>
-        <h3 class="py-2">Front</h3>
-        <v-layout wrap>
+        <div class=" display-2 py-3">Front</div>
+        <v-layout wrap justify-center>
           <v-chip outline color="white"
           v-for="(item, index) in filterName(skills, search)" :key="index"
           class="mx-2"
@@ -28,8 +28,8 @@
         </v-layout>
       </v-flex>
       <v-flex xs6>
-        <h3 class="py-2">Back</h3>
-        <v-layout wrap>
+        <div class="display-2 py-3">Back</div>
+        <v-layout wrap justify-center>
           <v-chip outline color="white"
           v-for="(item, index) in filterName(skills, search)" :key="index"
           class="mx-2"

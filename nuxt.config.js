@@ -41,8 +41,13 @@ module.exports = {
     }
   },
 
+  css: [
+    '~/assets/main.css'
+  ],
+
   plugins: [
     { src: '~/plugins/fullpage', ssr: false },
-    { src: '~/plugins/vuetify' }
+    { src: '~/plugins/vuetify' },
+    { src: '~/plugins/swiper', ssr: false },
   ]
 }
