@@ -2,12 +2,18 @@
   <span>
     <div class="display-3 py-4">Skills</div>
 
-    <v-text-field
-      label="Search..."
-      prepend-icon="search"
-      color="white"
-      v-model="search"
-    ></v-text-field>
+    <v-layout>
+      <v-flex></v-flex>
+      <v-flex xs12 md6>
+        <v-text-field
+          label="Search..."
+          prepend-icon="search"
+          color="white"
+          v-model="search"
+        ></v-text-field>
+      </v-flex>
+      <v-flex></v-flex>
+    </v-layout>
 
     <v-layout>
       <v-flex xs6>

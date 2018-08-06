@@ -31,7 +31,6 @@
         </v-card>
       </swiper-slide>
 
-      <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
@@ -77,15 +76,12 @@ export default {
       swiperOption: {
         effect: 'cube',
         grabCursor: true,
-        roundLengths: true,
+        speed: 800,
         cubeEffect: {
           shadow: true,
           slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94
-        },
-        pagination: {
-          el: '.swiper-pagination'
+          shadowOffset: 100,
+          shadowScale: 0.95
         },
         navigation: {
           nextEl: '.swiper-button-next',
