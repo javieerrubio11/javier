@@ -40,6 +40,11 @@
           <Skill/>
         </v-container>
       </div>
+      <div class="section">
+        <v-container>
+          <Proyect/>
+        </v-container>
+      </div>
     </full-page>
 
   </div>
@@ -49,11 +54,12 @@
 import Skill from '~/components/Skill.vue'
 import Certification from '~/components/Certification.vue'
 import Experiencie from '~/components/Experiencie.vue'
+import Proyect from '~/components/Proyect.vue'
 
 export default {
 
   components: {
-    Skill, Certification, Experiencie
+    Skill, Certification, Experiencie, Proyect
   },
 
   data() {
@@ -61,7 +67,7 @@ export default {
       options: {
         navigation: true,
         paddingTop: '60px',
-        anchors: ['page111', 'page2', 'page3', 'page4'],
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
         sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab'],
         responsiveWidth: '600'
       },
