@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="display-3 py-4">Certification</div>
+    <div class="display-3 py-4">Certification ({{certification.length}})</div>
 
     <v-layout>
       <v-flex></v-flex>

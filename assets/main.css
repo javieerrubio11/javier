@@ -1,3 +1,7 @@
 .fp-tableCell {
   vertical-align: top;
 }
+
+.justifyText {
+  text-align : justify;
+}

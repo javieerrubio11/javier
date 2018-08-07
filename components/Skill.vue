@@ -33,7 +33,7 @@
           </v-chip>
         </v-layout>
       </v-flex>
-      
+
       <v-flex xs6>
         <div class="display-2 py-3">Back</div>
         <v-layout wrap justify-center>
