@@ -22,7 +22,7 @@
         <v-layout wrap justify-center>
           <v-chip outline color="white"
           v-for="(item, index) in filterName(skills, search, category.type)" :key="index"
-          class="mx-2`own-chip">
+          class="mx-2 ownChip">
             <v-avatar color="white">
               <img :src="item.image" :alt="item.name">
             </v-avatar>
@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style scope>
-  .own-chip {
-    min-width: 130px;
+  .ownChip {
+    min-width: 120px;
   }
 </style>
