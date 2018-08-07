@@ -8,7 +8,7 @@
         <v-card>
           <v-card-title class="mx-4">
             <v-layout row wrap align-end>
-              <span xs12 class="display-2 pr-3"><b>{{experiencie.length - index}}. {{item.name}}</b></span>
+              <span xs12 class="display-2 pr-3">{{experiencie.length - index}}. <b>{{item.name}}</b></span>
               <span class="display-1">({{item.dateCalc}})</span>
               <v-flex></v-flex>
               <img class="autoSizeImage" :src="item.image" :alt="item.name">

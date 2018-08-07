@@ -2,24 +2,23 @@
   <span>
     <div class="display-3 py-4">Certification ({{certification.length}})</div>
 
-    <v-layout>
-      <v-flex></v-flex>
-      <v-flex>
-        <v-layout align-center wrap class="py-3" v-for="(item, index) in certification" :key="index">
-          <v-flex xs12 sm4 md4 lg3 class="hidden-xs-only">
-            <v-avatar size="150" tile>
-              <img class="" :src="item.image" alt="avatar">
-            </v-avatar>
-          </v-flex>
-          <v-flex xs12 sm8 md8 lg9>
+    <v-expansion-panel popout>
+      <v-expansion-panel-content class="pa-2" v-for="(item, index) in certification" :key="index">
+        <v-layout align-center slot="header">
+          <v-avatar size="100" tile>
+            <img class="" :src="item.image" alt="avatar">
+          </v-avatar>
+          <div class="pl-4">
             <div class="display-2"><b>{{item.name}}</b></div>
             <div class="display-1">({{item.date}}) {{item.institution}}</div>
-          </v-flex>
-          <v-flex></v-flex>
+          </div>
         </v-layout>
-      </v-flex>
-      <v-flex></v-flex>
-    </v-layout>
+        <v-divider></v-divider>
+        <v-card>
+          <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
   </span>
 </template>
 
@@ -40,4 +39,7 @@ export default {
 </script>
 
 <style>
+  .v-expansion-panel__header {
+    height: auto !important;
+  }
 </style>
