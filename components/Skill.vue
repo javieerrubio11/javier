@@ -17,30 +17,12 @@
 
     <v-layout>
 
-      <v-flex xs6 class="pr-4">
-        <div class=" display-2 py-3">Front</div>
+      <v-flex xs6 v-for="(category, index) in categoryList" :key="index">
+        <div class=" display-2 py-3">{{category.name}}</div>
         <v-layout wrap justify-center>
           <v-chip outline color="white"
-          v-for="(item, index) in filterName(skills, search)" :key="index"
-          class="mx-2`own-chip"
-          v-if="item.type == 'f'">
-            <v-avatar color="white">
-              <img :src="item.image" :alt="item.name">
-            </v-avatar>
-            <h3 class="px-2">
-              {{item.name}}
-            </h3>
-          </v-chip>
-        </v-layout>
-      </v-flex>
-
-      <v-flex xs6>
-        <div class="display-2 py-3">Back</div>
-        <v-layout wrap justify-center>
-          <v-chip outline color="white"
-          v-for="(item, index) in filterName(skills, search)" :key="index"
-          class="mx-2 own-chip"
-          v-if="item.type == 'b'">
+          v-for="(item, index) in filterName(skills, search, category.type)" :key="index"
+          class="mx-2`own-chip">
             <v-avatar color="white">
               <img :src="item.image" :alt="item.name">
             </v-avatar>
@@ -61,6 +43,10 @@ export default {
   data() {
     return {
       search: '',
+      categoryList: [
+        { name: 'Front', type: 'f' },
+        { name: 'Back', type: 'b' },
+      ],
       skills: [
         { name: 'Java', level: 5, type: 'b', image: 'image/skills/java.png' },
         { name: 'PHP', level: 4, type: 'b', image: 'image/skills/php.png' },
@@ -86,8 +72,9 @@ export default {
   },
 
   methods: {
-    filterName: function (items, text) {
+    filterName: function (items, text, type) {
       return items.filter(function (item) {
+        if(type != item.type) return false;
         if(text == null || text == '' || item.name == null) return true;
         return (item.name.toLowerCase().search(text.toLowerCase()) < 0) ? false : true;
       })
