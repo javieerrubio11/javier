@@ -1,12 +1,12 @@
 <template>
   <span>
-    <div class="display-3 py-4">Skills</div>
+    <div class="display-3 pb-4">Skills</div>
 
     <v-layout>
       <v-flex></v-flex>
       <v-flex xs12 md6>
         <v-text-field
-          label="Search..."
+          label="Search"
           prepend-icon="search"
           color="white"
           v-model="search"
@@ -21,7 +21,7 @@
         <div class=" display-2 py-3">{{category.name}}</div>
         <v-layout wrap justify-center>
           <v-chip outline color="white" v-for="(item, index) in filterName(orderByLevelName(skills), search, category.type)" :key="index" class="ma-2 ownChip">
-            <v-badge left :color="'primary lighten-' + (5 - item.level)">
+            <v-badge left :color="'primary darken-' + (item.level - 1)">
               <span slot="badge">{{item.level}}</span>
               <v-avatar color="white">
                 <img :src="item.image" :alt="item.name">

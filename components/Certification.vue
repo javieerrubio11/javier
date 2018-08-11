@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="display-3 py-4">Certification ({{certification.length}})</div>
+    <div class="display-3 pb-4">Certification ({{certification.length}})</div>
 
     <v-expansion-panel popout>
       <v-expansion-panel-content class="pa-2" v-for="(item, index) in certification" :key="index">
@@ -9,8 +9,8 @@
             <img class="" :src="item.image" alt="avatar">
           </v-avatar>
           <div>
-            <div class="display-2"><b>{{item.name}}</b></div>
-            <div class="display-1">({{item.date}}) {{item.institution}}</div>
+            <div class="display-1"><b>{{item.name}}</b></div>
+            <div class="headline">({{item.date}}) {{item.institution}}</div>
           </div>
         </v-layout>
         <v-divider></v-divider>

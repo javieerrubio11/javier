@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="display-3 py-4">Proyect</div>
+    <div class="display-3 pb-4">Proyect</div>
 
     <v-layout>
       <v-flex></v-flex>

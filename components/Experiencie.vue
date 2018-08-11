@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="display-3 py-4">Work Experiencie ({{experiencie.length}})</div>
+    <div class="display-3 pb-4">Work Experiencie ({{experiencie.length}})</div>
 
     <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
@@ -8,8 +8,8 @@
         <v-card>
           <v-card-title class="mx-4">
             <v-layout row wrap align-end>
-              <span xs12 class="display-2 pr-3">{{experiencie.length - index}}. <b>{{item.name}}</b></span>
-              <span class="display-1">({{item.dateCalc}})</span>
+              <span xs12 class="display-1 pr-3">{{experiencie.length - index}}. <b>{{item.name}}</b></span>
+              <span class="headline">({{item.dateCalc}})</span>
               <v-flex></v-flex>
               <img class="autoSizeImage" :src="item.image" :alt="item.name">
             </v-layout>
@@ -96,7 +96,7 @@ export default {
 
 <style scope>
   .autoSizeImage {
-    height: 55px;
+    height: 45px;
     width: auto;
   }
 </style>
