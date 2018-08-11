@@ -26,12 +26,15 @@
           </v-layout>
         </v-flex>
         <span class="pa-3" v-for="item in skills" :key="item.name">
-          <v-badge right overlap :color="'primary darken-' + (item.level - 1)">
-            <span slot="badge">{{item.level}}</span>
-            <v-avatar size="100">
-              <img :src="item.image" :alt="item.name">
-            </v-avatar>
-          </v-badge>
+          <v-tooltip bottom>
+            <span>{{item.name}}</span>
+            <v-badge slot="activator" right overlap :color="'primary darken-' + (item.level - 1)">
+              <span slot="badge">{{item.level}}</span>
+              <v-avatar size="100">
+                <img :src="item.image" :alt="item.name">
+              </v-avatar>
+            </v-badge>
+          </v-tooltip>
         </span>
       </v-layout>
     </v-flex>
