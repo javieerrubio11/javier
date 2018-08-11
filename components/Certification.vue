@@ -5,10 +5,10 @@
     <v-expansion-panel popout>
       <v-expansion-panel-content class="pa-2" v-for="(item, index) in certification" :key="index">
         <v-layout align-center slot="header">
-          <v-avatar size="100" tile>
+          <v-avatar size="100" tile class="pr-3 hidden-xs-only">
             <img class="" :src="item.image" alt="avatar">
           </v-avatar>
-          <div class="pl-4">
+          <div>
             <div class="display-2"><b>{{item.name}}</b></div>
             <div class="display-1">({{item.date}}) {{item.institution}}</div>
           </div>

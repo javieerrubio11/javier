@@ -4,25 +4,7 @@
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section">
         <v-container>
-          <v-layout align-center>
-            <v-flex>
-              <v-layout>
-                <v-flex></v-flex>
-                <v-avatar size="400" color="grey lighten-4">
-                  <img src="image/javier.png" alt="avatar">
-                </v-avatar>
-                <v-flex></v-flex>
-              </v-layout>
-            </v-flex>
-
-            <v-flex>
-              <h1>Vicente Javier González Llobet</h1>
-              <h2>Email: javieerrubio11@gmail.com</h2>
-              <h2>Age: 23 (05/04/1994)</h2>
-              <h2>Address: Poeta Llorente 114, La Vall d’Uixó, Castellón</h2>
-              <h2>Phone: 615248119</h2>
-            </v-flex>
-          </v-layout>
+          <Main/>
         </v-container>
       </div>
       <div class="section">
@@ -55,16 +37,19 @@ import Skill from '~/components/Skill.vue'
 import Certification from '~/components/Certification.vue'
 import Experiencie from '~/components/Experiencie.vue'
 import Proyect from '~/components/Proyect.vue'
+import Main from '~/components/Main.vue'
 
 export default {
 
   components: {
-    Skill, Certification, Experiencie, Proyect
+    Skill, Certification, Experiencie, Proyect, Main
   },
 
   data() {
     return {
       options: {
+        menu: '#menu-header',
+        scrollBar: false,
         navigation: true,
         paddingTop: '60px',
         anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],

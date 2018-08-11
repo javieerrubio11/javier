@@ -20,12 +20,13 @@
       <v-flex xs6 v-for="(category, index) in categoryList" :key="index">
         <div class=" display-2 py-3">{{category.name}}</div>
         <v-layout wrap justify-center>
-          <v-chip outline color="white"
-          v-for="(item, index) in filterName(skills, search, category.type)" :key="index"
-          class="mx-2 ownChip">
-            <v-avatar color="white">
-              <img :src="item.image" :alt="item.name">
-            </v-avatar>
+          <v-chip outline color="white" v-for="(item, index) in filterName(orderByLevelName(skills), search, category.type)" :key="index" class="ma-2 ownChip">
+            <v-badge left :color="'primary lighten-' + (5 - item.level)">
+              <span slot="badge">{{item.level}}</span>
+              <v-avatar color="white">
+                <img :src="item.image" :alt="item.name">
+              </v-avatar>
+            </v-badge>
             <h3 class="px-2">
               {{item.name}}
             </h3>
@@ -38,6 +39,8 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
 
   data() {
@@ -48,25 +51,26 @@ export default {
         { name: 'Back', type: 'b' },
       ],
       skills: [
-        { name: 'Java', level: 5, type: 'b', image: 'image/skills/java.png' },
-        { name: 'PHP', level: 4, type: 'b', image: 'image/skills/php.png' },
-        { name: 'Laravel', level: 4, type: 'b', image: 'image/skills/laravel.jpg' },
-        { name: 'Spring', level: 4, type: 'b', image: 'image/skills/spring.png' },
-        { name: 'Hibernate', level: 4, type: 'b', image: 'image/skills/hibernate.png' },
-        { name: 'Webservice', level: 5, type: 'b', image: 'image/skills/wsdl.png' },
-        { name: 'WSDL', level: 4, type: 'b', image: 'image/skills/wsdl.png' },
-        { name: 'GIT', level: 4, type: 'b', image: 'image/skills/git.png' },
-        { name: 'SQL', level: 5, type: 'b', image: 'image/skills/sql.png' },
+        { level: 5, name: 'Java', type: 'b', image: 'image/skills/java.png' },
+        { level: 4, name: 'PHP', type: 'b', image: 'image/skills/php.png' },
+        { level: 4, name: 'Laravel', type: 'b', image: 'image/skills/laravel.jpg' },
+        { level: 4, name: 'Spring', type: 'b', image: 'image/skills/spring.png' },
+        { level: 4, name: 'Hibernate', type: 'b', image: 'image/skills/hibernate.png' },
+        { level: 5, name: 'Webservice', type: 'b', image: 'image/skills/wsdl.png' },
+        { level: 4, name: 'WSDL', type: 'b', image: 'image/skills/wsdl.png' },
+        { level: 3, name: 'HL7', type: 'b', image: 'image/skills/hl7.jpg' },
+        { level: 4, name: 'GIT', type: 'b', image: 'image/skills/git.png' },
+        { level: 4, name: 'SQL', type: 'b', image: 'image/skills/sql.png' },
 
-        { name: 'JavaScript', level: 4, type: 'f', image: 'image/skills/javascript.png' },
-        { name: 'HTML5', level: 4, type: 'f', image: 'image/skills/html5.png' },
-        { name: 'CSS3', level: 4, type: 'f', image: 'image/skills/css3.png' },
-        { name: 'Sass', level: 3, type: 'f', image: 'image/skills/sass.png' },
-        { name: 'Npm', level: 3, type: 'f', image: 'image/skills/npm.png' },
-        { name: 'Yarn', level: 3, type: 'f', image: 'image/skills/yarn.png' },
-        { name: 'Node', level: 3, type: 'f', image: 'image/skills/node.png' },
-        { name: 'VueJs', level: 5, type: 'f', image: 'image/skills/vuejs.png' },
-        { name: 'AngularJs', level: 4, type: 'f', image: 'image/skills/angularjs2.png' },
+        { level: 5, name: 'JavaScript', type: 'f', image: 'image/skills/javascript.png' },
+        { level: 4, name: 'HTML5', type: 'f', image: 'image/skills/html5.png' },
+        { level: 4, name: 'CSS3', type: 'f', image: 'image/skills/css3.png' },
+        { level: 3, name: 'Sass', type: 'f', image: 'image/skills/sass.png' },
+        { level: 4, name: 'Npm', type: 'f', image: 'image/skills/npm.png' },
+        { level: 3, name: 'Yarn', type: 'f', image: 'image/skills/yarn.png' },
+        { level: 3, name: 'Node', type: 'f', image: 'image/skills/node.png' },
+        { level: 4, name: 'VueJs', type: 'f', image: 'image/skills/vuejs.png' },
+        { level: 4, name: 'AngularJs', type: 'f', image: 'image/skills/angularjs2.png' },
       ],
     }
   },
@@ -78,6 +82,10 @@ export default {
         if(text == null || text == '' || item.name == null) return true;
         return (item.name.toLowerCase().search(text.toLowerCase()) < 0) ? false : true;
       })
+    },
+
+    orderByLevelName: function(items) {
+      return _.orderBy(items, ['level', 'name'], ['desc', 'asc'])
     },
   },
 }
