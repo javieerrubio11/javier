@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
   .autoSizeImage {
     height: 45px;
     width: auto;
