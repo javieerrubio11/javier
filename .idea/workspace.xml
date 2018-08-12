@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049c24e5-4ca7-4d08-bd12-fb86ed72eeb9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/components/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Proyect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Proyect.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +22,14 @@
         <counts>
           <entry key="css" value="13" />
           <entry key="js" value="34" />
-          <entry key="vue" value="6657" />
+          <entry key="vue" value="6720" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="13" />
           <entry key="JavaScript" value="34" />
-          <entry key="Vue.js" value="6657" />
+          <entry key="Vue.js" value="6720" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -82,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/Experiencie.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#v-card-title#1;n#v-card#0;n#swiper-slide#0;n#swiper#0;n#span#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -124,12 +123,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/Proyect.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+            <state relative-caret-position="144">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
+                <element signature="n#style#0;n#v-carousel#0;n#v-flex#0;n#v-layout#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#span#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#span#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -371,12 +371,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531930921804</updated>
-      <workItem from="1533314104459" duration="48188000" />
+      <workItem from="1533314104459" duration="48898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48188000" />
+    <option name="totallyTimeSpent" value="48898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -572,22 +572,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Proyect.vue">
+    <entry file="file://$PROJECT_DIR$/components/Experiencie.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        <state relative-caret-position="255">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#span#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-card-title#1;n#v-card#0;n#swiper-slide#0;n#swiper#0;n#span#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Experiencie.vue">
+    <entry file="file://$PROJECT_DIR$/components/Proyect.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="144">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#v-card-title#1;n#v-card#0;n#swiper-slide#0;n#swiper#0;n#span#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-carousel#0;n#v-flex#0;n#v-layout#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#span#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#span#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
