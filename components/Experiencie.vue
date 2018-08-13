@@ -8,7 +8,7 @@
         <v-card>
           <v-card-title class="mx-4">
             <v-layout row wrap align-end>
-              <span xs12 class="display-1 pr-3">{{experiencie.length - index}}. <b>{{item.name}}</b></span>
+              <span xs12 class="display-1 pr-3"><b>{{item.name}}</b></span>
               <span class="headline">({{item.dateCalc}})</span>
               <v-flex></v-flex>
               <img class="autoSizeImage" :src="item.image" :alt="item.name">
@@ -22,7 +22,7 @@
               <v-layout row wrap>
                 <v-flex xs12 md6 class="headline pb-4" v-html="item.position"></v-flex>
                 <v-flex xs12 md6 class="headline pb-4" v-html="item.date"></v-flex>
-                <v-flex xs12 md5 class="headline pb-4 hidden-xs-only justifyText" v-html="item.description"></v-flex>
+                <v-flex xs12 md5 class="headline pb-4 justifyText" v-html="item.description"></v-flex>
                 <v-flex xs12 md1></v-flex>
                 <v-flex xs12 md6 class="headline pb-4 justifyText" v-html="item.skills"></v-flex>
               </v-layout>
@@ -48,8 +48,8 @@ export default {
           name: 'Tugesto',
           date: '02/2018 – Now',
           dateCalc: '7 months',
-          position: '<b>Project manager</b>',
-          description: 'Programmer of web pages as <b>full stack developer</b> and <b>project manager</b> in important projects. One project was create a <b>dashboard</b> of statistics for the clients.',
+          position: '<b>Team leader</b>',
+          description: 'Programmer of web pages as <b>full stack developer</b> and <b>team leader</b> in important projects. One project was create a <b>dashboard</b> of statistics for the clients.',
           skills: '<b>Tools and technologies</b>: <b>PHP</b>, <b>Laravel</b>, Lumen, <b>VueJs</b>, <b>Nuxt</b>, Node, Npm, Yarn, SASS, CSS3, HTML5, API Rest, MySQL, GIT and <b>UX/IU</b> (material design).',
           image: 'image/experiencie/logo_tugesto.png'
         },

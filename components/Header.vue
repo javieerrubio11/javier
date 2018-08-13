@@ -6,7 +6,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items class="hidden-sm-and-down" id="menu-header">
+      <v-toolbar-items class="hidden-xs-only" id="menu-header">
         <v-btn @click="goToPage" to="#page1" flat>Link One</v-btn>
         <v-btn @click="goToPage" to="#page2" flat>Link Two</v-btn>
         <v-btn @click="goToPage" to="#page3" flat>Link Three</v-btn>

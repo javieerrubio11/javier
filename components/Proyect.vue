@@ -6,23 +6,29 @@
       <swiper :options="swiperOption1" ref="mySwiper2">
         <swiper-slide v-for="(item, index) in proyect" :key="index">
           <v-card>
-            <v-layout align-center row wrap>
+            <v-layout align-center row wrap style="position: relative;">
               <v-flex xs12 md6>
-                <v-card-title primary-title>
+                <v-card-title primary-title style="position: relative;">
                   <v-layout column>
                     <div class="py-2">
-                      <span class="display-1">{{proyect.length - index}}. <b>{{item.name}}</b></span>
+                      <span class="display-1"><b>{{item.name}}</b></span>
                       <span class="headline"> ({{item.date}})</span>
                     </div>
                     <div class="py-2" v-if="item.link">
-                      <v-btn :href="item.link" target="_blank" color="secondary" round outline>
+                      <v-btn :href="item.link" target="_blank" color="secondary"
+                       round bottom right absolute
+                        style="z-index: 2;">
                         <v-icon left>link</v-icon> Link
                       </v-btn>
                     </div>
+
+                    <div class="headline pb-1"><b>Technologies</b></div>
+                    <div class="title" v-html="item.technologies"></div>
                   </v-layout>
                 </v-card-title>
               </v-flex>
-              <v-flex xs12 md6>
+
+              <v-flex xs12 md6 class="mediaPadding">
                 <v-card-media v-if="!item.images" :src="item.image" height="250"></v-card-media>
 
                 <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
@@ -34,35 +40,27 @@
                   <div class="swiper-pagination" slot="pagination"></div>
                 </swiper>
               </v-flex>
+
+              <v-btn class="hidden-sm-and-up" icon fab @click="show = !show" absolute right bottom color="secondary" small style="z-index: 2;">
+                <v-icon bottom style="height: 18px;">{{ !show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+              </v-btn>
             </v-layout>
 
             <v-divider></v-divider>
 
             <v-card-title primary-title class="justifyText" style="position: relative;">
-              <v-layout column>
-                <div class="title pb-1"><b>Description</b></div>
-                <div v-html="item.description"></div>
-
-                <div class="title pb-1"><b>Technologies</b></div>
-                <div v-html="item.technologies"></div>
+              <v-layout column class="hidden-xs-only">
+                <div class="headline pb-1"><b>Description</b></div>
+                <div class="title" v-html="item.description"></div>
               </v-layout>
-
-              <!--<v-btn icon fab @click="show = !show" absolute right bottom color="secondary" small>-->
-                <!--<v-icon bottom style="height: 18px;">{{ !show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>-->
-              <!--</v-btn>-->
             </v-card-title>
 
-            <!--<v-divider></v-divider>-->
-
-            <!--<v-slide-y-transition>-->
-              <!--<v-card-text v-show="show">-->
-                <!--<div class="title pb-1">Descripción</div>-->
-                <!--<p>El usuario tiene que crearse una cuenta o iniciar sesión con su cuenta de Google.</p>-->
-                <!--<p>La aplicación tiene como vista principal el mapa de la ciudad y tiene marcadores con los retos disponibles.</p>-->
-                <!--<p>Hay diferentes tipos de retos, en algunos tienes que contestar preguntas sobre cosas de interés de la zona del reto, en otros deberás encontrar un código QR en la zona y escanearlo para completarlo.</p>-->
-                <!--<p>La aplicación está preparada para varias ciudades, el usuario puede seleccionar en qué ciudad quiere participar y va acumulando puntos al superar los retos.</p>-->
-              <!--</v-card-text>-->
-            <!--</v-slide-y-transition>-->
+            <v-slide-y-transition>
+              <v-card-title v-show="show">
+                <div class="headline pb-1"><b>Description</b></div>
+                <div class="title" v-html="item.description"></div>
+              </v-card-title>
+            </v-slide-y-transition>
           </v-card>
         </swiper-slide>
 
@@ -134,5 +132,15 @@ export default {
   .autoSizeImage {
     height: 300px;
     width: auto;
+  }
+
+  .mediaPadding {
+    padding: 0px 0px;
+  }
+
+  @media (max-width: 599px) {
+    .mediaPadding {
+      padding: 32px 0px;
+    }
   }
 </style>
