@@ -20,7 +20,7 @@
           <v-card-title class="mx-4" style="min-height: 400px;">
             <v-layout align-center>
               <v-layout row wrap>
-                <v-flex xs12 md6 class="headline pb-4" v-html="item.position"></v-flex>
+                <v-flex xs12 md6 class="display-1 pb-4" v-html="item.position"></v-flex>
                 <v-flex xs12 md6 class="headline pb-4" v-html="item.date"></v-flex>
                 <v-flex xs12 md5 class="headline pb-4 justifyText" v-html="item.description"></v-flex>
                 <v-flex xs12 md1></v-flex>

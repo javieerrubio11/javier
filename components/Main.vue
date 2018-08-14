@@ -12,7 +12,7 @@
 
     <v-flex sm12 md6 class="px-2 py-2">
       <h1>Vicente Javier González Llobet</h1>
-      <h2>Address: Poeta Llorente 114, La Vall d’Uixó, Castellón</h2>
+      <h2>Address: La Vall d’Uixó, Castellón, España</h2>
       <h2>Age: 24 (05/04/1994)</h2>
       <h2>Email: javieerrubio11@gmail.com</h2>
       <h2>Phone: 615248119</h2>
