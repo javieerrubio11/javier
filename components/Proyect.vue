@@ -29,7 +29,7 @@
               </v-flex>
 
               <v-flex xs12 md6 class="mediaPadding">
-                <v-card-media v-if="!item.images" :src="item.image" height="250"></v-card-media>
+                <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
 
                 <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
                   <swiper-slide v-for="(item, i) in item.images" :key="i">
@@ -56,7 +56,7 @@
             </v-card-title>
 
             <v-slide-y-transition>
-              <v-card-title v-show="show">
+              <v-card-title v-show="show && breakpoint.xs">
                 <div class="headline pb-1"><b>Description</b></div>
                 <div class="title" v-html="item.description"></div>
               </v-card-title>
@@ -73,6 +73,10 @@
 
 <script>
 export default {
+
+  computed: {
+    breakpoint: function () { return this.$vuetify.breakpoint }
+  },
 
   data() {
     return {
@@ -130,7 +134,7 @@ export default {
 
 <style scoped>
   .autoSizeImage {
-    height: 300px;
+    height: 330px;
     width: auto;
   }
 
