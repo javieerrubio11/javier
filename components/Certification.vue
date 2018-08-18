@@ -15,7 +15,14 @@
         </v-layout>
         <v-divider></v-divider>
         <v-card>
-          <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
+          <v-card-text>
+            <v-layout row wrap align-center>
+              <v-flex class="subheading" xs12 md6 xl4 v-for="subject in orderByCode(item.subjects)" :key="subject.code">
+                <span v-if="subject.strong">- <strong>{{subject.title}}</strong></span>
+                <span v-else>- {{subject.title}}</span>
+              </v-flex>
+            </v-layout>
+          </v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -23,16 +30,98 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
 
   data() {
     return {
       certification: [
-        { name: 'Master in Intelligent Systems', date: '2016 - 2017', image: 'image/uji.png', institution: 'Universitat Jaume I' },
-        { name: 'Degree in Computer Engineering', date: '2012 - 2016', image: 'image/uji.png', institution: 'Universitat Jaume I' },
-        { name: 'Science and Technology High School', date: '2010 - 2012', image: 'image/honori.gif', institution: 'IES Honori García' },
+        {
+          name: 'Master in Intelligent Systems',
+          date: '2016 - 2017', image: 'image/uji.png',
+          institution: 'Universitat Jaume I',
+          subjects: [
+            { code: 'SIU010', strong: false, title: 'Reconocimiento de Formas' },
+            { code: 'SIU012', strong: true, title: 'Percepción Visual' },
+            { code: 'SIU021', strong: true, title: 'Interfaces Multimodales' },
+            { code: 'SIU027', strong: true, title: 'Minería de Datos' },
+            { code: 'SIU050', strong: true, title: 'Trabajo de Final de Máster (Detección de duplicados en un flujo de muestras biométricas)' },
+            { code: 'SIU014', strong: false, title: 'Modelado y Reconstrucción 3D' },
+            { code: 'SIU020', strong: false, title: 'Síntesis de Imagen y Animación' },
+            { code: 'SIU022', strong: false, title: 'Realidad Virtual y Aumentada' },
+            { code: 'SIU025', strong: false, title: 'Ontologías y la Web Semántica' },
+            { code: 'SIU026', strong: false, title: 'Representación del Conocimiento y Razonamiento' },
+            { code: 'SIU029', strong: true, title: 'Sistemas Contextuales' },
+            { code: 'SIU035', strong: false, title: 'Monitorización Remota y Video-Vigilancia' },
+            { code: 'SIU037', strong: false, title: 'Imagen Médica' },
+            { code: 'SIU038', strong: false, title: 'Inteligencia Ambiental' },
+            { code: 'SIU040', strong: false, title: 'Sistemas de Información Estratégica' },
+            { code: 'SIU045', strong: true, title: 'Aprendizaje Automático' },
+            { code: 'SIU048', strong: true, title: 'Integración de Fuentes de Datos Heterogéneas' },
+          ]
+        },
+        {
+          name: 'Degree in Computer Engineering',
+          date: '2012 - 2016', image: 'image/uji.png',
+          institution: 'Universitat Jaume I',
+          subjects: [
+            { code: 'EI1001', strong: false, title: 'Matemáticas I' },
+            { code: 'EI1002', strong: false, title: 'Informática Básica' },
+            { code: 'EI1003', strong: false, title: 'Programación I' },
+            { code: 'EI1004', strong: false, title: 'Estructura de Computadores' },
+            { code: 'EI1005', strong: false, title: 'Inglés' },
+            { code: 'EI1006', strong: false, title: 'Matemáticas II' },
+            { code: 'EI1007', strong: false, title: 'Física' },
+            { code: 'EI1008', strong: false, title: 'Programación II' },
+            { code: 'EI1009', strong: false, title: 'Organización y Gestión de Empresas' },
+            { code: 'EI1010', strong: false, title: 'Arquitectura de Computadores' },
+            { code: 'EI1011', strong: false, title: 'Ampliación de Matemáticas' },
+            { code: 'EI1012', strong: false, title: 'Estadística y Optimización' },
+            { code: 'EI1013', strong: false, title: 'Estructuras de Datos' },
+            { code: 'EI1014', strong: false, title: 'Sistemas Operativos' },
+            { code: 'EI1015', strong: false, title: 'Introducción a Redes' },
+            { code: 'EI1016', strong: false, title: 'Electrónica' },
+            { code: 'EI1017', strong: false, title: 'Programación Avanzada' },
+            { code: 'EI1018', strong: false, title: 'Administración de Sistemas Operativos' },
+            { code: 'EI1019', strong: false, title: 'Administración y Configuración de Redes' },
+            { code: 'EI1020', strong: false, title: 'Bases de Datos' },
+            { code: 'EI1021', strong: false, title: 'Sistemas Distribuidos' },
+            { code: 'EI1022', strong: false, title: 'Algoritmia' },
+            { code: 'EI1023', strong: false, title: 'Fundamentos de Ingeniería del Software' },
+            { code: 'EI1024', strong: false, title: 'Programación Concurrente y Paralela' },
+            { code: 'EI1025', strong: false, title: 'Gráficos y Multimedia' },
+            { code: 'EI1026', strong: false, title: 'Derecho de las Tecnologías de la Información y las Comunicaciones' },
+            { code: 'EI1027', strong: false, title: 'Diseño e Implementación de Sistemas de Información' },
+            { code: 'EI1028', strong: false, title: 'Sistemas Inteligentes' },
+            { code: 'EI1031', strong: false, title: 'Verificación y Validación' },
+            { code: 'EI1032', strong: false, title: 'Análisis de Software' },
+            { code: 'EI1035', strong: false, title: 'Iniciativa Empresarial' },
+            { code: 'EI1039', strong: false, title: 'Diseño de Software' },
+            { code: 'EI1040', strong: false, title: 'Gestión de Proyectos de Ingeniería del Software' },
+            { code: 'EI1041', strong: false, title: 'Diseño e Implementación de Bases de Datos' },
+            { code: 'EI1048', strong: false, title: 'Paradigmas de Software' },
+            { code: 'EI1049', strong: false, title: 'Taller de Ingeniería del Software' },
+            { code: 'EI1050', strong: false, title: 'Métodos Ágiles' },
+            { code: 'EI1054', strong: false, title: 'Prácticas Externas y Proyecto de Final de Grado' },
+          ]
+        },
+        {
+          name: 'Science and Technology High School',
+          date: '2010 - 2012', image: 'image/honori.gif',
+          institution: 'IES Honori García',
+          subjects: [
+            
+          ]
+        },
       ],
     }
+  },
+
+  methods: {
+    orderByCode: function(items) {
+      return _.orderBy(items, ['code'], ['asc'])
+    },
   },
 
 }
