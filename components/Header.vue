@@ -1,16 +1,31 @@
 <template>
   <span>
-    <v-toolbar fixed color="transparent" dark height="60" flat>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Title</v-toolbar-title>
+    <v-toolbar fixed color="transparent" dark height="60" flat id="menu">
+      <!--<v-toolbar-side-icon></v-toolbar-side-icon>-->
+      <v-toolbar-title>
+        Javier
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items class="hidden-xs-only" id="menu-header">
-        <v-btn @click="goToPage" to="#page1" flat>Link One</v-btn>
-        <v-btn @click="goToPage" to="#page2" flat>Link Two</v-btn>
-        <v-btn @click="goToPage" to="#page3" flat>Link Three</v-btn>
+      <v-toolbar-items class="hidden-sm-and-down" id="menu-header">
+        <v-btn flat v-for="(item, index) in sections" :key="index" active-class>
+          <a class="white--text body-2" :href="'#' + item.page">
+            {{item.name}}
+          </a>
+        </v-btn>
       </v-toolbar-items>
+
+      <span class="px-1">
+        <v-btn icon large target="_blank" href="https://github.com/javieerrubio11">
+          <v-icon large>mdi-github-circle</v-icon>
+        </v-btn>
+      </span>
+      <span class="px-1">
+        <v-btn icon large target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
+          <v-icon large>mdi-linkedin</v-icon>
+        </v-btn>
+      </span>
     </v-toolbar>
   </span>
 </template>
@@ -20,18 +35,14 @@ export default {
 
   data() {
     return {
-      sections: {
-
-      },
     }
   },
 
-  methods: {
-    goToPage() {
-      console.log(this, this.$refs, this.$refs.fullpage)
-      // fullpage_api.setAllowScrolling(false);
+  computed: {
+    sections: function () {
+      return this.$store.state.sections
     }
-  }
+  },
 
 }
 </script>

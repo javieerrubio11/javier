@@ -52,8 +52,8 @@ export default {
         scrollBar: false,
         navigation: true,
         paddingTop: '60px',
-        anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-        sectionsColor: ['#ff5f45', '#41b883', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab'],
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+        sectionsColor: ['#ff5f45', '#41b883', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9'],
         responsiveWidth: '960'
       },
     }
