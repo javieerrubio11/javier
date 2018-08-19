@@ -10,7 +10,7 @@
 
       <v-toolbar-items class="hidden-sm-and-down" id="menu-header">
         <v-btn flat v-for="(item, index) in sections" :key="index" active-class>
-          <a class="white--text body-2" :href="'#' + item.page">
+          <a class="white--text header-item py-3" :href="'#' + item.page">
             {{item.name}}
           </a>
         </v-btn>
@@ -47,5 +47,9 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+  .header-item {
+    text-decoration: none;
+    font-size: 15px;
+  }
 </style>

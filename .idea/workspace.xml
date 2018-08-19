@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049c24e5-4ca7-4d08-bd12-fb86ed72eeb9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/README.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +27,7 @@
           <entry key="gitignore" value="6" />
           <entry key="js" value="125" />
           <entry key="md" value="6" />
-          <entry key="vue" value="9571" />
+          <entry key="vue" value="9671" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -40,7 +35,7 @@
           <entry key="CSS" value="13" />
           <entry key="JavaScript" value="125" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Vue.js" value="9571" />
+          <entry key="Vue.js" value="9671" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -112,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/Header.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="122" selection-start-line="22" selection-start-column="122" selection-end-line="22" selection-end-column="122" />
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -402,12 +397,12 @@
       <workItem from="1533314104459" duration="56753000" />
       <workItem from="1534444094961" duration="64000" />
       <workItem from="1534444202985" duration="329000" />
-      <workItem from="1534452808652" duration="14780000" />
+      <workItem from="1534452808652" duration="15483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71926000" />
+    <option name="totallyTimeSpent" value="72629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -643,8 +638,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Header.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="122" selection-start-line="22" selection-start-column="122" selection-end-line="22" selection-end-column="122" />
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
         </state>
       </provider>
     </entry>
