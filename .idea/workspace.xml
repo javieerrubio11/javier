@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049c24e5-4ca7-4d08-bd12-fb86ed72eeb9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/components/Certification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Certification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Skill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Skill.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +27,7 @@
           <entry key="gitignore" value="6" />
           <entry key="js" value="34" />
           <entry key="md" value="6" />
-          <entry key="vue" value="8810" />
+          <entry key="vue" value="8818" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -35,7 +35,7 @@
           <entry key="CSS" value="13" />
           <entry key="JavaScript" value="34" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Vue.js" value="8810" />
+          <entry key="Vue.js" value="8818" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -60,19 +60,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/Skill.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="204">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/Certification.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
+            <state relative-caret-position="2283">
               <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
             </state>
           </provider>
@@ -180,7 +180,6 @@
         <option value="$PROJECT_DIR$/plugins/swiper.js" />
         <option value="$PROJECT_DIR$/nuxt.config.js" />
         <option value="$PROJECT_DIR$/assets/main.css" />
-        <option value="$PROJECT_DIR$/components/Skill.vue" />
         <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/components/Header.vue" />
         <option value="$PROJECT_DIR$/components/Main.vue" />
@@ -189,6 +188,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/components/Certification.vue" />
+        <option value="$PROJECT_DIR$/components/Skill.vue" />
       </list>
     </option>
   </component>
@@ -371,18 +371,18 @@
       <workItem from="1533314104459" duration="56753000" />
       <workItem from="1534444094961" duration="64000" />
       <workItem from="1534444202985" duration="329000" />
-      <workItem from="1534452808652" duration="7377000" />
+      <workItem from="1534452808652" duration="7541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64523000" />
+    <option name="totallyTimeSpent" value="64687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21260683" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21232876" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -586,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Skill.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -602,8 +595,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Certification.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
+        <state relative-caret-position="2283">
           <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Skill.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>

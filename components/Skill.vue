@@ -10,6 +10,7 @@
           prepend-icon="search"
           color="white"
           v-model="search"
+          solo
         ></v-text-field>
       </v-flex>
       <v-flex></v-flex>
