@@ -6,9 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
@@ -25,11 +26,13 @@
   "devDependencies": {
     "@mdi/font": "^2.5.94",
     "babel-eslint": "^8.2.1",
+    "cross-env": "^5.2.0",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
     "material-design-icons-iconfont": "^3.0.3",
+    "push-dir": "^0.4.1",
     "vue-loader": "^13.6.0"
   }
 }
