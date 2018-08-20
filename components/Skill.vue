@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="display-3 pb-4">Skills</div>
+    <div class="display-3 pb-4">Skills ({{skills.length}})</div>
 
     <v-layout>
       <v-flex></v-flex>
@@ -28,7 +28,7 @@
                 <img :src="item.image" :alt="item.name">
               </v-avatar>
             </v-badge>
-            <h3 class="px-2">
+            <h3 class="pl-3 pr-2">
               {{item.name}}
             </h3>
           </v-chip>
@@ -72,6 +72,7 @@ export default {
         { level: 3, name: 'Node', type: 'f', image: 'image/skills/node.png' },
         { level: 4, name: 'VueJs', type: 'f', image: 'image/skills/vuejs.png' },
         { level: 4, name: 'AngularJs', type: 'f', image: 'image/skills/angularjs2.png' },
+        { level: 4, name: 'jQuery', type: 'f', image: 'image/skills/jquery.png' },
       ],
     }
   },
@@ -94,6 +95,6 @@ export default {
 
 <style scope>
   .ownChip {
-    min-width: 120px;
+    min-width: 150px;
   }
 </style>
