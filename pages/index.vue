@@ -27,6 +27,11 @@
           <Proyect/>
         </v-container>
       </div>
+      <div class="section">
+        <v-container>
+          <Github/>
+        </v-container>
+      </div>
     </full-page>
 
   </div>
@@ -38,11 +43,12 @@ import Certification from '~/components/Certification.vue'
 import Experiencie from '~/components/Experiencie.vue'
 import Proyect from '~/components/Proyect.vue'
 import Main from '~/components/Main.vue'
+import Github from '~/components/Github.vue'
 
 export default {
 
   components: {
-    Skill, Certification, Experiencie, Proyect, Main
+    Skill, Certification, Experiencie, Proyect, Main, Github
   },
 
   data() {
