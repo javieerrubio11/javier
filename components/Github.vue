@@ -11,9 +11,7 @@
       >
         <v-card>
           <v-card-title primary-title>
-
             <v-layout row wrap align-center>
-
               <h3 class="headline mb-0 textTitle">{{item.name}}</h3>
 
               <v-spacer></v-spacer>
@@ -21,13 +19,35 @@
               <v-avatar color="grey lighten-4">
                 <img :src="item.owner.avatar_url" alt="owner">
               </v-avatar>
+            </v-layout>
+          </v-card-title>
 
+          <v-card-title primary-title>
+            <v-layout row wrap align-center justify-center>
+              <!-- <v-chip v-for="(language, key, index) in item.languages" :key="index">
+                <v-avatar color="primary">
+                  {{ (language * 100 / item.language_total_size).toFixed(1)}}%
+                </v-avatar>
+                {{key}}
+              </v-chip> -->
+              <span class="pa-1" v-for="(language, key, index) in item.languages" :key="index">
+                <v-progress-circular
+                  :size="70"
+                  :width="5"
+                  :value="calculePercent(language, item)"
+                  color="primary"
+                >
+                  <span class="caption text-xs-center">
+                    {{ key }}
+                    <!-- {{ (language * 100 / item.language_total_size).toFixed(1)}}% -->
+                  </span>
+                </v-progress-circular>
+              </span>
             </v-layout>
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="orange">Share</v-btn>
-            <v-btn flat color="orange">Explore</v-btn>
+            <v-btn flat outline color="primary" block target="_blank" :href="item.html_url">Go</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -43,6 +63,7 @@ export default {
   data() {
     return {
       repos: {},
+      languages: {},
     }
   },
 
@@ -52,10 +73,32 @@ export default {
 
   methods: {
     async cargarDatos() {
+
+      // Main repo data
       let data = await axios.get(`https://api.github.com/users/javieerrubio11/repos`)
       console.log(data.data)
       this.repos = data
+
+      // Languages repo data
+      for(let i = 0; i < this.repos.data.length; i++) {
+        let element = this.repos.data[i]
+        let languages = await axios.get(element.languages_url)
+        element.languages = languages.data
+
+        let total = 0
+        for (var property in languages.data) {
+          if (languages.data.hasOwnProperty(property)) {
+              total += languages.data[property]
+          }
+        }
+        element.language_total_size = total
+      }
     },
+
+    calculePercent(value, item) {
+      console.log(value)
+      return value * 100 / item.language_total_size
+    }
   },
 
 }
