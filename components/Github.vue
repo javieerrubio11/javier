@@ -10,16 +10,19 @@
         class="pa-1"
       >
         <v-card>
-          <v-img
-          src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-          aspect-ratio="2.75"
-          ></v-img>
-
           <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">{{item.name}}</h3>
-              <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
-            </div>
+
+            <v-layout row wrap align-center>
+
+              <h3 class="headline mb-0 textTitle">{{item.name}}</h3>
+
+              <v-spacer></v-spacer>
+
+              <v-avatar color="grey lighten-4">
+                <img :src="item.owner.avatar_url" alt="owner">
+              </v-avatar>
+
+            </v-layout>
           </v-card-title>
 
           <v-card-actions>
@@ -59,5 +62,7 @@ export default {
 </script>
 
 <style scope>
-
+  .textTitle {
+    text-transform: capitalize;
+  }
 </style>
