@@ -4,7 +4,7 @@
 
     <v-layout row wrap>
       <v-flex
-        xs12 sm6 md4
+        xs12 sm6 lg4 xl3
         v-for="item in repos.data"
         :key="item.id"
         class="pa-1"
@@ -24,25 +24,24 @@
 
           <v-card-title primary-title>
             <v-layout row wrap align-center justify-center>
-              <!-- <v-chip v-for="(language, key, index) in item.languages" :key="index">
-                <v-avatar color="primary">
+              <v-chip v-for="(language, key, index) in item.languages" :key="index">
+                <!-- <v-avatar color="primary">
                   {{ (language * 100 / item.language_total_size).toFixed(1)}}%
-                </v-avatar>
+                </v-avatar> -->
                 {{key}}
-              </v-chip> -->
-              <span class="pa-1" v-for="(language, key, index) in item.languages" :key="index">
+              </v-chip>
+              <!-- <span class="pa-1" v-for="(language, key, index) in item.languages" :key="index">
                 <v-progress-circular
                   :size="70"
                   :width="5"
                   :value="calculePercent(language, item)"
                   color="primary"
                 >
-                  <span class="caption text-xs-center">
+                  <span class="caption">
                     {{ key }}
-                    <!-- {{ (language * 100 / item.language_total_size).toFixed(1)}}% -->
                   </span>
                 </v-progress-circular>
-              </span>
+              </span> -->
             </v-layout>
           </v-card-title>
 
@@ -63,7 +62,6 @@ export default {
   data() {
     return {
       repos: {},
-      languages: {},
     }
   },
 
@@ -76,7 +74,6 @@ export default {
 
       // Main repo data
       let data = await axios.get(`https://api.github.com/users/javieerrubio11/repos`)
-      console.log(data.data)
       this.repos = data
 
       // Languages repo data
@@ -93,6 +90,7 @@ export default {
         }
         element.language_total_size = total
       }
+          console.log(data.data)
     },
 
     calculePercent(value, item) {
