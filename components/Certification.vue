@@ -20,7 +20,7 @@
               <v-flex xs12>
                 <p class="title">Subjects:</p>
               </v-flex>
-              <v-flex class="subheading" xs12 sm6 xl4 px-1 v-for="subject in orderByCode(item.subjects)" :key="subject.code">
+              <v-flex class="subheading" xs12 sm4 xl3 px-1 v-for="subject in orderByCode(item.subjects)" :key="subject.code">
                 <span v-if="subject.strong">- <strong>{{subject.title}}</strong></span>
                 <span v-else>- {{subject.title}}</span>
               </v-flex>
