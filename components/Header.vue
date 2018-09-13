@@ -3,7 +3,7 @@
     <v-toolbar fixed color="transparent" dark height="60" flat id="menu">
       <!--<v-toolbar-side-icon></v-toolbar-side-icon>-->
       <v-toolbar-title>
-        Javier
+        V. Javier González
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
