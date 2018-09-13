@@ -139,7 +139,7 @@ export default {
             { code: 'EI1008', strong: true, title: 'Programming II' },
             { code: 'EI1009', strong: false, title: 'Organization and Business Management' },
             { code: 'EI1010', strong: false, title: 'Computer Architecture' },
-            { code: 'EI1011', strong: true, title: 'Mathematics expension' },
+            { code: 'EI1011', strong: true, title: 'Mathematics expansion' },
             { code: 'EI1012', strong: true, title: 'Statistics and Optimization' },
             { code: 'EI1013', strong: true, title: 'Data structures' },
             { code: 'EI1014', strong: false, title: 'Operating systems' },
