@@ -1,40 +1,13 @@
 <template>
-  <div>
+  <v-layout row wrap align-center>
 
-    <full-page :options="options" id="fullpage" ref="fullpage">
-      <div class="section">
-        <v-container>
-          <Main/>
-        </v-container>
-      </div>
-      <div class="section">
-        <v-container>
-          <Certification/>
-        </v-container>
-      </div>
-      <div class="section">
-        <v-container>
-          <Experiencie/>
-        </v-container>
-      </div>
-      <div class="section">
-        <v-container>
-          <Skill/>
-        </v-container>
-      </div>
-      <div class="section">
-        <v-container>
-          <Proyect/>
-        </v-container>
-      </div>
-      <div class="section">
-        <v-container>
-          <Github/>
-        </v-container>
-      </div>
-    </full-page>
+    <v-flex xs12 v-for="(item, index) in sections" :key="index" :class="[item.color + ' lighten-3']">
+      <v-container>
+        <component v-bind:is="item.name"></component>
+      </v-container>
+    </v-flex>
 
-  </div>
+  </v-layout>
 </template>
 
 <script>
@@ -53,15 +26,14 @@ export default {
 
   data() {
     return {
-      options: {
-        menu: '#menu-header',
-        scrollBar: false,
-        navigation: true,
-        paddingTop: '60px',
-        anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
-        sectionsColor: ['#26A69A', '#7E57C2', '#9CCC65', '#FFCA28', '#42A5F5', '#D4E157', '#2c3e4f', '#ba5be9'],
-        responsiveWidth: '960'
-      },
+      sections: [
+        { id: 1, name: 'Main', color: 'teal' },
+        { id: 2, name: 'Certification', color: 'green' },
+        { id: 3, name: 'Experiencie', color: 'blue' },
+        { id: 4, name: 'Skill', color: 'green' },
+        { id: 5, name: 'Proyect', color: 'amber' },
+        { id: 6, name: 'Github', color: 'lime' },
+      ]
     }
   },
 

@@ -2,76 +2,69 @@
   <span>
     <div class="display-3 pb-4">Proyects ({{proyect.length}})</div>
 
-    <v-layout>
-      <swiper :options="swiperOption1" ref="mySwiper2">
-        <swiper-slide v-for="(item, index) in proyect" :key="index">
-          <v-card>
-            <v-layout align-center row wrap style="position: relative;">
-              <v-flex xs12 md6>
-                <v-card-title primary-title style="position: relative;">
-                  <v-layout row wrap>
-                    <v-flex xs12 class="py-2">
-                      <span class="display-1"><b>{{item.name}}</b></span>
-                      <span class="headline"> ({{item.date}})</span>
-                    </v-flex>
+    <div class="py-2" v-for="(item, index) in proyect" :key="index">
+      <v-card>
+        <v-layout align-center row wrap style="position: relative;">
+          <v-flex xs12 md6>
+            <v-card-title primary-title style="position: relative;">
+              <v-layout row wrap>
+                <v-flex xs12 class="py-2">
+                  <span class="display-1"><b>{{item.name}}</b></span>
+                  <span class="headline"> ({{item.date}})</span>
+                </v-flex>
 
-                    <v-flex xs12>
-                      <p class="headline">
-                        <b>Technologies</b>: {{item.technologies}}
-                      </p>
-                    </v-flex>
+                <v-flex xs12>
+                  <p class="headline">
+                    <b>Technologies</b>: {{item.technologies}}
+                  </p>
+                </v-flex>
 
-                    <span class="py-2" v-if="item.link">
-                      <v-btn :href="item.link" target="_blank" color="secondary"
-                             round bottom right absolute
-                             style="z-index: 2;">
-                        <v-icon left>link</v-icon> Link
-                      </v-btn>
-                    </span>
-                  </v-layout>
-                </v-card-title>
-              </v-flex>
-
-              <v-flex xs12 md6 class="mediaPadding">
-                <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
-
-                <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
-                  <swiper-slide v-for="(item, i) in item.images" :key="i">
-                    <v-layout rwo justify-center>
-                      <img class="autoSizeImage" :src="item"/>
-                    </v-layout>
-                  </swiper-slide>
-                  <div class="swiper-pagination" slot="pagination"></div>
-                </swiper>
-              </v-flex>
-
-              <v-btn class="hidden-sm-and-up" icon fab @click="show = !show" absolute right bottom color="secondary" small style="z-index: 2;">
-                <v-icon bottom style="height: 18px;">{{ !show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
-              </v-btn>
-            </v-layout>
-
-            <v-divider></v-divider>
-
-            <v-card-title primary-title class="justifyText" style="position: relative;">
-              <v-layout column class="hidden-xs-only">
-                <div class="headline pb-1"><b>Description</b></div>
-                <div class="title" v-html="item.description"></div>
+                <span class="py-2" v-if="item.link">
+                  <v-btn :href="item.link" target="_blank" color="secondary"
+                         round bottom right absolute
+                         style="z-index: 2;">
+                    <v-icon left>link</v-icon> Link
+                  </v-btn>
+                </span>
               </v-layout>
             </v-card-title>
+          </v-flex>
 
-            <v-slide-y-transition>
-              <v-card-title v-show="show && breakpoint.xs">
-                <div class="headline pb-1"><b>Description</b></div>
-                <div class="title" v-html="item.description"></div>
-              </v-card-title>
-            </v-slide-y-transition>
-          </v-card>
-        </swiper-slide>
+          <v-flex xs12 md6 class="mediaPadding">
+            <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
 
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
-    </v-layout>
+            <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
+              <swiper-slide v-for="(item, i) in item.images" :key="i">
+                <v-layout rwo justify-center>
+                  <img class="autoSizeImage" :src="item"/>
+                </v-layout>
+              </swiper-slide>
+              <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
+          </v-flex>
+
+          <v-btn class="hidden-sm-and-up" icon fab @click="show = !show" absolute right bottom color="secondary" small style="z-index: 2;">
+            <v-icon bottom style="height: 18px;">{{ !show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+          </v-btn>
+        </v-layout>
+
+        <v-divider></v-divider>
+
+        <v-card-title primary-title class="justifyText" style="position: relative;">
+          <v-layout column class="hidden-xs-only">
+            <div class="headline pb-1"><b>Description</b></div>
+            <div class="title" v-html="item.description"></div>
+          </v-layout>
+        </v-card-title>
+
+        <v-slide-y-transition>
+          <v-card-title v-show="show && breakpoint.xs">
+            <div class="headline pb-1"><b>Description</b></div>
+            <div class="title" v-html="item.description"></div>
+          </v-card-title>
+        </v-slide-y-transition>
+      </v-card>
+    </div>
   </span>
 </template>
 

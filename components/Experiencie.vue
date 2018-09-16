@@ -2,38 +2,32 @@
   <span>
     <div class="display-3 pb-4">Work Experiencie ({{experiencie.length}})</div>
 
-    <swiper :options="swiperOption" ref="mySwiper">
-      <!-- slides -->
-      <swiper-slide v-for="(item, index) in experiencie" :key="index">
-        <v-card>
-          <v-card-title class="mx-4">
-            <v-layout row wrap align-end>
-              <span xs12 class="display-1 pr-3"><b>{{item.name}}</b></span>
-              <span class="headline">({{item.dateCalc}})</span>
-              <v-flex></v-flex>
-              <img class="autoSizeImage" :src="item.image" :alt="item.name">
+    <div class="py-2" v-for="(item, index) in experiencie" :key="index">
+      <v-card>
+        <v-card-title class="secondary lighten-5">
+          <v-layout row wrap align-end class="mx-4">
+            <span xs12 class="display-1 pr-3"><b>{{item.name}}</b></span>
+            <span class="headline">({{item.dateCalc}})</span>
+            <v-flex></v-flex>
+            <img class="autoSizeImage" :src="item.image" :alt="item.name">
+          </v-layout>
+        </v-card-title>
+
+        <v-divider></v-divider>
+
+        <v-card-title class="mx-4" style="min-height: 400px;">
+          <v-layout align-center>
+            <v-layout row wrap>
+              <v-flex xs12 md6 class="display-1 pb-4" v-html="item.position"></v-flex>
+              <v-flex xs12 md6 class="headline pb-4" v-html="item.date"></v-flex>
+              <v-flex xs12 md5 class="headline pb-4 justifyText" v-html="item.description"></v-flex>
+              <v-flex xs12 md1></v-flex>
+              <v-flex xs12 md6 class="headline pb-4 justifyText" v-html="item.skills"></v-flex>
             </v-layout>
-          </v-card-title>
-
-          <v-divider></v-divider>
-
-          <v-card-title class="mx-4" style="min-height: 400px;">
-            <v-layout align-center>
-              <v-layout row wrap>
-                <v-flex xs12 md6 class="display-1 pb-4" v-html="item.position"></v-flex>
-                <v-flex xs12 md6 class="headline pb-4" v-html="item.date"></v-flex>
-                <v-flex xs12 md5 class="headline pb-4 justifyText" v-html="item.description"></v-flex>
-                <v-flex xs12 md1></v-flex>
-                <v-flex xs12 md6 class="headline pb-4 justifyText" v-html="item.skills"></v-flex>
-              </v-layout>
-            </v-layout>
-          </v-card-title>
-        </v-card>
-      </swiper-slide>
-
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
-    </swiper>
+          </v-layout>
+        </v-card-title>
+      </v-card>
+    </div>
 
   </span>
 </template>
