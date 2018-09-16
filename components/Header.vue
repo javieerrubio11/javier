@@ -9,15 +9,13 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-sm-and-down" id="menu-header">
-        <v-btn flat v-for="(item, index) in sections" :key="index" active-class>
-          <a class="white--text header-item py-3" :href="'#' + item.page">
-            {{item.name}}
-          </a>
+        <v-btn flat v-for="(item, index) in sections" :key="index" active-class @click="$vuetify.goTo('#'+item.anchor, options)">
+          {{item.name}}
         </v-btn>
       </v-toolbar-items>
 
       <span class="px-1">
-        <v-btn icon large target="_blank" href="https://github.com/javieerrubio11">
+        <v-btn icon large @click="$vuetify.goTo(item.anchor, options)">
           <v-icon large>mdi-github-circle</v-icon>
         </v-btn>
       </span>
@@ -33,15 +31,25 @@
 <script>
 export default {
 
-  data() {
+  data () {
     return {
+      duration: 300,
+      offset: 0,
+      easing: 'easeInOutCubic',
     }
   },
 
   computed: {
     sections: function () {
       return this.$store.state.sections
-    }
+    },
+    options () {
+      return {
+        duration: this.duration,
+        offset: this.offset,
+        easing: this.easing
+      }
+    },
   },
 
 }

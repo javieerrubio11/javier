@@ -1,9 +1,10 @@
 export const state = () => ({
   sections: [
-    {page: 'page1', name: 'Home'},
-    {page: 'page2', name: 'Certification'},
-    {page: 'page3', name: 'Experiencie'},
-    {page: 'page4', name: 'Skill'},
-    {page: 'page5', name: 'Proyect'},
-  ],
+    { anchor: 'section-1', name: 'Main', color: 'teal' },
+    { anchor: 'section-2', name: 'Certification', color: 'green' },
+    { anchor: 'section-3', name: 'Experiencie', color: 'blue' },
+    { anchor: 'section-4', name: 'Skill', color: 'green' },
+    { anchor: 'section-5', name: 'Proyect', color: 'amber' },
+    { anchor: 'section-6', name: 'Github', color: 'lime' },
+  ]
 })
