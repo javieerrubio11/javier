@@ -4,7 +4,7 @@
 
     <div class="py-2" v-for="(item, index) in proyect" :key="index">
       <v-card>
-        <v-layout align-center row wrap style="position: relative;">
+        <v-layout align-center row wrap>
           <v-flex xs12 md6>
             <v-card-title primary-title style="position: relative;">
               <v-layout row wrap>
@@ -42,27 +42,16 @@
               <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
           </v-flex>
-
-          <v-btn class="hidden-sm-and-up" icon fab @click="show = !show" absolute right bottom color="secondary" small style="z-index: 2;">
-            <v-icon bottom style="height: 18px;">{{ !show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
-          </v-btn>
         </v-layout>
 
         <v-divider></v-divider>
 
-        <v-card-title primary-title class="justifyText" style="position: relative;">
-          <v-layout column class="hidden-xs-only">
+        <v-card-title primary-title class="justifyText">
+          <v-layout column>
             <div class="headline pb-1"><b>Description</b></div>
             <div class="title" v-html="item.description"></div>
           </v-layout>
         </v-card-title>
-
-        <v-slide-y-transition>
-          <v-card-title v-show="show && breakpoint.xs">
-            <div class="headline pb-1"><b>Description</b></div>
-            <div class="title" v-html="item.description"></div>
-          </v-card-title>
-        </v-slide-y-transition>
       </v-card>
     </div>
   </span>

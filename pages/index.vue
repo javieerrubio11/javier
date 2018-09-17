@@ -44,6 +44,6 @@ export default {
 
 <style>
   .section-index {
-    min-height: 75vh;
+    padding: 60px 0px;
   }
 </style>
