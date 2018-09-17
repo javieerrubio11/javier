@@ -9,7 +9,7 @@
         :key="item.id"
         class="pa-1"
       >
-        <v-card>
+        <v-card hover>
           <v-card-title primary-title>
             <v-layout row wrap align-center>
               <h3 class="headline mb-0 textTitle">{{item.name}}</h3>
@@ -24,7 +24,7 @@
 
           <v-card-title primary-title>
             <v-layout row wrap align-center justify-center>
-              <v-chip v-for="(language, key, index) in item.languages" :key="index">
+              <v-chip v-for="(language, key, index) in item.languages" :key="index" color="secondary lighten-5">
                 <!-- <v-avatar color="primary">
                   {{ (language * 100 / item.language_total_size).toFixed(1)}}%
                 </v-avatar> -->
