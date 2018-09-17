@@ -4,7 +4,7 @@
       <v-layout>
         <v-flex></v-flex>
         <v-avatar size="300" color="grey lighten-4">
-          <img src="image/javier.png" alt="avatar">
+          <img src="image/javier.png" alt="Javier">
         </v-avatar>
         <v-flex></v-flex>
       </v-layout>
