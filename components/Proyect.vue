@@ -3,7 +3,7 @@
     <div class="display-3 pb-4">Proyects ({{proyect.length}})</div>
 
     <div class="py-2" v-for="(item, index) in proyect" :key="index">
-      <v-card>
+      <v-card hover>
         <v-layout align-center row wrap>
           <v-flex xs12 md6>
             <v-card-title primary-title style="position: relative;">

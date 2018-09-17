@@ -1,6 +1,14 @@
 <template>
   <span>
-    <v-toolbar fixed color="transparent" dark height="60" flat id="menu">
+    <v-toolbar
+      fixed
+      :class="[(hoverToolbar) ? 'primary' : 'transparent']"
+      dark
+      height="60"
+      flat
+      @mouseenter="hoverToolbar = true"
+      @mouseleave="hoverToolbar = false"
+    >
       <!--<v-toolbar-side-icon></v-toolbar-side-icon>-->
       <v-toolbar-title>
         V. Javier González
@@ -15,7 +23,7 @@
       </v-toolbar-items>
 
       <span class="px-1">
-        <v-btn icon large @click="$vuetify.goTo(item.anchor, options)">
+        <v-btn icon large target="_blank" href="https://github.com/javieerrubio11">
           <v-icon large>mdi-github-circle</v-icon>
         </v-btn>
       </span>
@@ -36,6 +44,7 @@ export default {
       duration: 300,
       offset: 0,
       easing: 'easeInOutCubic',
+      hoverToolbar: false,
     }
   },
 

@@ -3,8 +3,8 @@
     <div class="display-3 pb-4">Work Experiencie ({{experiencie.length}})</div>
 
     <div class="py-2" v-for="(item, index) in experiencie" :key="index">
-      <v-card>
-        <v-card-title class="secondary lighten-5">
+      <v-card hover>
+        <v-card-title>
           <v-layout row wrap align-end class="mx-4">
             <span xs12 class="display-1 pr-3"><b>{{item.name}}</b></span>
             <span class="headline">({{item.dateCalc}})</span>
