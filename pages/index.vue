@@ -5,7 +5,7 @@
       xs12
       v-for="(item, index) in sections"
       :key="index"
-      :class="[item.color + ' lighten-3']"
+      :class="['teal lighten-' + (index)]"
       :id="item.anchor"
       class="section-index"
     >

@@ -2,12 +2,13 @@
   <span>
     <v-toolbar
       fixed
-      :class="[(hoverToolbar || xsOrSm) ? 'primary' : 'transparent']"
+      :class="[(hoverToolbar || xsOrSm) ? 'primary darken-1' : 'transparent']"
       dark
       height="60"
       flat
       @mouseenter="hoverToolbar = true"
       @mouseleave="hoverToolbar = false"
+      style="z-index: 5;"
     >
 
       <v-toolbar-side-icon class="hidden-md-and-up" @click="showMenu = true"></v-toolbar-side-icon>
