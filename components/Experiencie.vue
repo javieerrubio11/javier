@@ -67,21 +67,6 @@ export default {
         },
       ],
 
-      swiperOption: {
-        effect: 'cube',
-        grabCursor: true,
-        speed: 800,
-        cubeEffect: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 100,
-          shadowScale: 0.95
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
-      }
     }
   },
 

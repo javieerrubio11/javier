@@ -118,26 +118,6 @@ export default {
       //     technologies: '<p><b>Tableau</b>, <b>Knime</b> and <b>Firebase</b>.</p>',
       //   },
       // ],
-
-      swiperOption1: {
-        setWrapperSize: true,
-        autoHeight: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
-      },
-
-      swiperOption2: {
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-      },
     }
   },
 

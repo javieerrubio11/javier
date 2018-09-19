@@ -40,8 +40,6 @@ export default {
 }
 </script>
 
-
-
 <style>
   .section-index {
     padding: 60px 0px;
