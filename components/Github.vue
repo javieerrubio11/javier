@@ -5,9 +5,9 @@
     <v-layout row wrap>
       <v-flex
         xs12 sm6 lg4 xl3
-        v-for="item in repos.data"
+        v-for="item in repos"
         :key="item.id"
-        class="pa-1"
+        class="pa-2"
       >
         <v-card hover>
           <v-card-title primary-title>
@@ -73,12 +73,12 @@ export default {
     async cargarDatos() {
 
       // Main repo data
-      let data = await axios.get(`https://api.github.com/users/javieerrubio11/repos`)
-      this.repos = data
+      let data = await axios.get('https://api.github.com/users/javieerrubio11/repos')
+      this.repos = data.data
 
       // Languages repo data
-      for(let i = 0; i < this.repos.data.length; i++) {
-        let element = this.repos.data[i]
+      for(let i = 0; i < this.repos.length; i++) {
+        let element = this.repos[i]
         let languages = await axios.get(element.languages_url)
         element.languages = languages.data
 
@@ -90,7 +90,6 @@ export default {
         }
         element.language_total_size = total
       }
-          console.log(data.data)
     },
 
     calculePercent(value, item) {
