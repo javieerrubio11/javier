@@ -9,7 +9,7 @@
       tile
     >
       <v-card-title class="primary darken-1">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+        <strong class="subheading">A brief presentation of my knowledge...</strong>
 
         <v-spacer></v-spacer>
 
@@ -36,7 +36,7 @@ export default {
 
   data: () => ({
     icons: [
-      { name: 'mdi-file-pdf', link: '../static/file/cv-en.pdf' },
+      // { name: 'mdi-file-pdf', link: '../static/file/cv-en.pdf' },
       { name: 'mdi-github-circle', link: 'https://github.com/javieerrubio11' },
       { name: 'mdi-linkedin', link: 'https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/' },
     ]
