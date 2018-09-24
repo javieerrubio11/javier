@@ -8,11 +8,9 @@
       flat
       tile
     >
-      <v-card-title class="primary darken-1">
+      <!-- <v-card-title class="primary darken-1">
         <strong class="subheading">A brief presentation of my knowledge...</strong>
-
         <v-spacer></v-spacer>
-
         <v-btn
           v-for="(icon,index) in icons"
           :key="index"
@@ -22,10 +20,10 @@
         >
           <v-icon>{{ icon.name }}</v-icon>
         </v-btn>
-      </v-card-title>
+      </v-card-title> -->
 
-      <v-card-actions class="primary darken-3 justify-center">
-        <p>&copy;2018 — <strong>Vicente Javier González Llobet</strong></p>
+      <v-card-actions class="primary darken-2 justify-center">
+        <p>&copy; 2018 — <strong>Vicente Javier González Llobet</strong></p>
       </v-card-actions>
     </v-card>
   </v-footer>

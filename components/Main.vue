@@ -1,6 +1,6 @@
 <template>
   <div class="positionRelative">
-
+    <no-ssr>
     <vue-particles
       color="#dedede"
       :particleOpacity="0.8"
@@ -20,6 +20,7 @@
       class="fullScreen positionAbsolute"
     >
     </vue-particles>
+  </no-ssr>
 
     <v-container class="pointerNone">
       <v-layout align-center row wrap>
@@ -33,7 +34,7 @@
           </v-layout>
         </v-flex>
 
-        <v-flex sm12 md6 class="px-2 py-2 pointerAuto" style="z-index:5">
+        <v-flex sm12 md6 class="px-2 py-2 pointerAuto z5">
           <h1>Vicente Javier González Llobet</h1>
           <h2>Address: La Vall d’Uixó, Castellón, España</h2>
           <h2>Age: 24 (05/04/1994)</h2>
@@ -44,7 +45,7 @@
           <v-layout row wrap justify-center>
             <v-flex xs12 class="display-1 pb-2">
               <v-layout justify-center>
-                <b>Main Skills</b>
+                <b class="pointerAuto z5">Main Skills</b>
               </v-layout>
             </v-flex>
             <span class="pa-3 pointerAuto" v-for="item in skills" :key="item.name">
@@ -96,5 +97,9 @@ export default {
   .fullScreen {
     height: 105%;
     width: 100%;
+  }
+
+  .z5 {
+    z-index: 5;
   }
 </style>
