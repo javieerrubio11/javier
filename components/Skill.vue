@@ -1,6 +1,6 @@
 <template>
-  <span>
-    <div class="display-3 pb-4">Skills ({{skills.length}})</div>
+  <v-container>
+    <div class="display-3 pb-4">Skills</div>
 
     <v-layout>
       <v-flex></v-flex>
@@ -17,7 +17,6 @@
     </v-layout>
 
     <v-layout>
-
       <v-flex xs6 v-for="(category, index) in categoryList" :key="index">
         <div class=" display-2 py-3">{{category.name}}</div>
         <v-layout wrap justify-center>
@@ -34,9 +33,9 @@
           </v-chip>
         </v-layout>
       </v-flex>
-
     </v-layout>
-  </span>
+
+  </v-container>
 </template>
 
 <script>

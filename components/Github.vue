@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <v-container>
     <div class="display-3 pb-4">Github Projects</div>
 
     <v-layout row wrap>
@@ -51,7 +51,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </span>
+  </v-container>
 </template>
 
 <script>

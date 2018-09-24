@@ -1,6 +1,6 @@
 <template>
-  <span>
-    <div class="display-3 pb-4">Work Experiencie ({{experiencie.length}})</div>
+  <v-container>
+    <div class="display-3 pb-4">Work Experiencie</div>
 
     <div class="py-2" v-for="(item, index) in experiencie" :key="index">
       <v-card hover>
@@ -29,7 +29,7 @@
       </v-card>
     </div>
 
-  </span>
+  </v-container>
 </template>
 
 <script>

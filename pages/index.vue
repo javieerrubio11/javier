@@ -5,13 +5,11 @@
       xs12
       v-for="(item, index) in sections"
       :key="index"
-      :class="['teal lighten-' + (index)]"
+      :class="[(index % 2 == 0) ? 'teal lighten-3' : 'teal lighten-2']"
       :id="item.anchor"
       class="section-index"
     >
-      <v-container>
-        <component v-bind:is="item.name"></component>
-      </v-container>
+      <component v-bind:is="item.name"></component>
     </v-flex>
 
   </v-layout>

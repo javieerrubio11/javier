@@ -1,6 +1,6 @@
 <template>
-  <span>
-    <div class="display-3 pb-4">Certification ({{certification.length}})</div>
+  <v-container>
+    <div class="display-3 pb-4">Certification</div>
 
     <v-expansion-panel popout>
       <v-expansion-panel-content class="pa-2" v-for="(item, index) in certification" :key="index">
@@ -32,7 +32,7 @@
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
-  </span>
+  </v-container>
 </template>
 
 <script>

@@ -1,7 +1,19 @@
-.fp-tableCell {
-  vertical-align: top;
-}
-
 .justifyText {
   text-align : justify;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.positionAbsolute {
+  position: absolute;
+}
+
+.pointerNone {
+  pointer-events: none;
+}
+
+.pointerAuto {
+  pointer-events: auto;
 }

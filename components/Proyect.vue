@@ -1,6 +1,6 @@
 <template>
-  <span>
-    <div class="display-3 pb-4">Proyects ({{proyect.length}})</div>
+  <v-container>
+    <div class="display-3 pb-4">Proyects</div>
 
     <div class="py-2" v-for="(item, index) in proyect" :key="index">
       <v-card hover>
@@ -54,7 +54,7 @@
         </v-card-title>
       </v-card>
     </div>
-  </span>
+  </v-container>
 </template>
 
 <script>
