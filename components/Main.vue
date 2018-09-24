@@ -33,7 +33,7 @@
           </v-layout>
         </v-flex>
 
-        <v-flex sm12 md6 class="px-2 py-2">
+        <v-flex sm12 md6 class="px-2 py-2 pointerAuto" style="z-index:5">
           <h1>Vicente Javier González Llobet</h1>
           <h2>Address: La Vall d’Uixó, Castellón, España</h2>
           <h2>Age: 24 (05/04/1994)</h2>
