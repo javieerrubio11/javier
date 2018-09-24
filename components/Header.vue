@@ -64,7 +64,7 @@
         <v-list-tile
           v-for="item in sections"
           :key="item.anchor"
-          @click="$vuetify.goTo('#'+item.anchor, options)"
+          @click="$vuetify.goTo('#'+item.anchor, options); showMenu = !showMenu;"
         >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
