@@ -1,6 +1,6 @@
 <template>
   <div class="positionRelative">
-    <no-ssr>
+    <!-- <no-ssr>
     <vue-particles
       color="#dedede"
       :particleOpacity="0.8"
@@ -20,7 +20,7 @@
       class="fullScreen positionAbsolute"
     >
     </vue-particles>
-  </no-ssr>
+  </no-ssr> -->
 
     <v-container class="pointerNone">
       <v-layout align-center row wrap>
