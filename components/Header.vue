@@ -8,7 +8,7 @@
       flat
       @mouseenter="hoverToolbar = true"
       @mouseleave="hoverToolbar = false"
-      style="z-index: 5;"
+      style="z-index: 10;"
     >
 
       <v-toolbar-side-icon class="hidden-md-and-up" @click="showMenu = true"></v-toolbar-side-icon>
