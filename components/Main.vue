@@ -1,26 +1,26 @@
 <template>
   <div class="positionRelative">
-    <!-- <no-ssr>
-    <vue-particles
-      color="#dedede"
-      :particleOpacity="0.8"
-      :particlesNumber="80"
-      shapeType="circle"
-      :particleSize="5"
-      linesColor="#dedede"
-      :linesWidth="2"
-      :lineLinked="true"
-      :lineOpacity="0.7"
-      :linesDistance="150"
-      :moveSpeed="3"
-      :hoverEffect="true"
-      hoverMode="grab"
-      :clickEffect="true"
-      clickMode="push"
-      class="fullScreen positionAbsolute"
-    >
-    </vue-particles>
-  </no-ssr> -->
+    <no-ssr>
+      <vue-particles
+        color="#dedede"
+        :particleOpacity="0.8"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="5"
+        linesColor="#dedede"
+        :linesWidth="2"
+        :lineLinked="true"
+        :lineOpacity="0.7"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+        class="fullScreen positionAbsolute"
+      >
+      </vue-particles>
+    </no-ssr>
 
     <v-container class="pointerNone">
       <v-layout align-center row wrap>
