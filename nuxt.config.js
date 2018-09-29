@@ -44,6 +44,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/vuetify' },
     { src: '~/plugins/swiper', ssr: false },
+    { src: '~/plugins/ga.js', ssr: false },
     // { src: '~/plugins/particle', ssr: false },
   ],
 }
