@@ -12,6 +12,7 @@
       @click="$vuetify.goTo(target, options)"
       v-scroll="onScroll"
       v-show="fab"
+      class="positionButton"
     >
       <v-icon class="pt-3">keyboard_arrow_up</v-icon>
     </v-btn>
@@ -54,5 +55,7 @@ export default {
 </script>
 
 <style scope>
-
+  .positionButton {
+    bottom: 74px !important;
+  }
 </style>
