@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   /*
   ** Headers of the page
@@ -46,6 +48,10 @@ module.exports = {
     { src: '~/plugins/swiper', ssr: false },
     { src: '~/plugins/ga.js', ssr: false },
     { src: '~/plugins/particle', ssr: false },
-    { src: '~/plugins/chat' },
+    { src: '~/plugins/chat', ssr: false },
   ],
+
+  modules: [
+    { src: '@nuxtjs/dotenv' },
+  ]
 }
