@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="display-3 pb-4">Github Projects</div>
+    <h2 class="display-2 pb-4">Github Projects</h2>
 
     <v-layout row wrap>
       <v-flex
@@ -93,7 +93,6 @@ export default {
     },
 
     calculePercent(value, item) {
-      console.log(value)
       return value * 100 / item.language_total_size
     }
   },

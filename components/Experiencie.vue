@@ -1,13 +1,13 @@
 <template>
   <v-container>
-    <div class="display-3 pb-4">Work Experiencie</div>
+    <h2 class="display-2 pb-4">Work Experiencie</h2>
 
-    <div class="py-2" v-for="(item, index) in experiencie" :key="index">
+    <div class="py-3" v-for="(item, index) in experiencie" :key="index">
       <v-card hover>
         <v-card-title>
           <v-layout row wrap align-end class="mx-4">
-            <span xs12 class="display-1 pr-3"><b>{{item.name}}</b></span>
-            <span class="headline">({{item.dateCalc}})</span>
+            <h3 xs12 class="display-1 pr-3"><b>{{item.name}}</b></h3>
+            <h4 class="headline">({{item.dateCalc}})</h4>
             <v-flex></v-flex>
             <img class="autoSizeImage" :src="item.image" :alt="item.name">
           </v-layout>
@@ -15,14 +15,14 @@
 
         <v-divider></v-divider>
 
-        <v-card-title class="mx-4" style="min-height: 400px;">
+        <v-card-title class="mx-4">
           <v-layout align-center>
             <v-layout row wrap>
-              <v-flex xs12 md6 class="display-1 pb-4" v-html="item.position"></v-flex>
-              <v-flex xs12 md6 class="headline pb-4" v-html="item.date"></v-flex>
-              <v-flex xs12 md5 class="headline pb-4 justifyText" v-html="item.description"></v-flex>
+              <v-flex xs12 md6 class="headline pb-4" v-html="item.position"></v-flex>
+              <v-flex xs12 md6 class="subheadline pb-4" v-html="item.date"></v-flex>
+              <v-flex xs12 md5 class="subheadline pb-4 justifyText" v-html="item.description"></v-flex>
               <v-flex xs12 md1></v-flex>
-              <v-flex xs12 md6 class="headline pb-4 justifyText" v-html="item.skills"></v-flex>
+              <v-flex xs12 md6 class="subheadline pb-4 justifyText" v-html="item.skills"></v-flex>
             </v-layout>
           </v-layout>
         </v-card-title>

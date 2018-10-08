@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="display-3 pb-4">Certification</div>
+    <h2 class="display-2 pb-4">Certification</h2>
 
     <v-expansion-panel popout>
       <v-expansion-panel-content class="pa-2" v-for="(item, index) in certification" :key="index">
@@ -8,9 +8,9 @@
           <v-avatar size="100" tile class="pr-3 hidden-xs-only">
             <img class="" :src="item.image" alt="avatar">
           </v-avatar>
-          <div>
-            <div class="display-1"><b>{{item.name}}</b></div>
-            <div class="headline">({{item.date}}) {{item.institution}}</div>
+          <div class="pl-1">
+            <h3 class="display-1"><b>{{item.name}}</b></h3>
+            <h4 class="headline">({{item.date}}) {{item.institution}}</h4>
           </div>
         </v-layout>
         <v-divider></v-divider>

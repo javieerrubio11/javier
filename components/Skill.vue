@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="display-3 pb-4">Skills</div>
+    <h2 class="display-2 pb-4">Skills</h2>
 
     <v-layout>
       <v-flex></v-flex>
@@ -18,7 +18,7 @@
 
     <v-layout>
       <v-flex xs6 v-for="(category, index) in categoryList" :key="index">
-        <div class=" display-2 py-3">{{category.name}}</div>
+        <h3 class="display-1 py-3">{{category.name}}</h3>
         <v-layout wrap justify-center>
           <v-chip outline color="white" v-for="(item, index) in filterName(orderByLevelName(skills), search, category.type)" :key="index" class="ma-2 ownChip">
             <v-badge left :color="'primary darken-' + (item.level - 1)">

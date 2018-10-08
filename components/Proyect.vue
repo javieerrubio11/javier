@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="display-3 pb-4">Proyects</div>
+    <h2 class="display-2 pb-4">Proyects</h2>
 
     <div class="py-2" v-for="(item, index) in proyect" :key="index">
       <v-card hover>
@@ -9,8 +9,7 @@
             <v-card-title primary-title style="position: relative;">
               <v-layout row wrap>
                 <v-flex xs12 class="py-2">
-                  <span class="display-1"><b>{{item.name}}</b></span>
-                  <span class="headline"> ({{item.date}})</span>
+                  <h3 class="display-1"><b>{{item.name}}</b> ({{item.date}})</h3>
                 </v-flex>
 
                 <v-flex xs12>
@@ -20,9 +19,7 @@
                 </v-flex>
 
                 <span class="py-2" v-if="item.link">
-                  <v-btn :href="item.link" target="_blank" color="secondary"
-                         round bottom right absolute
-                         style="z-index: 2;">
+                  <v-btn :href="item.link" target="_blank" color="secondary" round bottom right absolute style="z-index: 2;">
                     <v-icon left>link</v-icon> Link
                   </v-btn>
                 </span>
