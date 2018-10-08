@@ -2,7 +2,7 @@
 export default ({ app }) => {
 
   (function(d, w, c) {
-    w.ChatraID = process.env.CHAT_ID;
+    w.ChatraID = process.env.CHAT_ID || '9hWykkwsyxv3drTJo';
     var s = d.createElement('script');
     w[c] = w[c] || function() {
         (w[c].q = w[c].q || []).push(arguments);
