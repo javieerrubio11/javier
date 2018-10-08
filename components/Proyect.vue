@@ -2,10 +2,10 @@
   <v-container>
     <h2 class="display-2 pb-4">Proyects</h2>
 
-    <div class="py-2" v-for="(item, index) in proyect" :key="index">
-      <v-card hover>
-        <v-layout align-center row wrap>
-          <v-flex xs12 md6>
+    <v-layout row wrap>
+      <v-flex xs12 md6 pa-2 v-for="(item, index) in proyect" :key="index">
+        <v-card hover>
+
             <v-card-title primary-title style="position: relative;">
               <v-layout row wrap>
                 <v-flex xs12 class="py-2">
@@ -25,9 +25,9 @@
                 </span>
               </v-layout>
             </v-card-title>
-          </v-flex>
 
-          <v-flex xs12 md6 class="mediaPadding">
+            <v-divider/>
+
             <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
 
             <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
@@ -38,19 +38,19 @@
               </swiper-slide>
               <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
-          </v-flex>
-        </v-layout>
 
-        <v-divider></v-divider>
 
-        <v-card-title primary-title class="justifyText">
-          <v-layout column>
-            <div class="headline pb-1"><b>Description</b></div>
-            <div class="title" v-html="item.description"></div>
-          </v-layout>
-        </v-card-title>
-      </v-card>
-    </div>
+          <v-divider></v-divider>
+
+          <v-card-title primary-title class="justifyText">
+            <v-layout column>
+              <div class="headline pb-1"><b>Description</b></div>
+              <div class="title" v-html="item.description"></div>
+            </v-layout>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
