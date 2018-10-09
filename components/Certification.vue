@@ -8,9 +8,9 @@
           <v-avatar size="100" tile class="pr-3 hidden-xs-only">
             <img class="" :src="item.image" alt="avatar">
           </v-avatar>
-          <div class="pl-1">
-            <h3 class="display-1"><b>{{item.name}}</b></h3>
-            <h4 class="headline">({{item.date}}) {{item.institution}}</h4>
+          <div class="pl-3">
+            <h3 class="headline"><b>{{item.name}}</b></h3>
+            <h4 class="title pt-2">{{item.institution}} ({{item.date}})</h4>
           </div>
         </v-layout>
         <v-divider></v-divider>

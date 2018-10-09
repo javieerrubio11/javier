@@ -9,11 +9,11 @@
             <v-card-title primary-title style="position: relative;">
               <v-layout row wrap>
                 <v-flex xs12 class="py-2">
-                  <h3 class="display-1"><b>{{item.name}}</b> ({{item.date}})</h3>
+                  <h3 class="headline"><b>{{item.name}}</b> ({{item.date}})</h3>
                 </v-flex>
 
                 <v-flex xs12>
-                  <p class="headline">
+                  <p class="title">
                     <b>Technologies</b>: {{item.technologies}}
                   </p>
                 </v-flex>
@@ -44,8 +44,8 @@
 
           <v-card-title primary-title class="justifyText">
             <v-layout column>
-              <div class="headline pb-1"><b>Description</b></div>
-              <div class="title" v-html="item.description"></div>
+              <div class="title pb-1"><b>Description</b></div>
+              <div class="subheadline" v-html="item.description"></div>
             </v-layout>
           </v-card-title>
         </v-card>

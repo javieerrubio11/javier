@@ -5,9 +5,9 @@
     <div class="py-3" v-for="(item, index) in experiencie" :key="index">
       <v-card hover>
         <v-card-title>
-          <v-layout row wrap align-end class="mx-4">
-            <h3 xs12 class="display-1 pr-3"><b>{{item.name}}</b></h3>
-            <h4 class="headline">({{item.dateCalc}})</h4>
+          <v-layout row wrap align-end class="mx-4" align-center>
+            <h3 xs12 class="headline pr-3"><b>{{item.name}}</b></h3>
+            <h4 class="title">({{item.dateCalc}})</h4>
             <v-flex></v-flex>
             <img class="autoSizeImage" :src="item.image" :alt="item.name">
           </v-layout>
@@ -18,8 +18,8 @@
         <v-card-title class="mx-4">
           <v-layout align-center>
             <v-layout row wrap>
-              <v-flex xs12 md6 class="headline pb-4" v-html="item.position"></v-flex>
-              <v-flex xs12 md6 class="subheadline pb-4" v-html="item.date"></v-flex>
+              <v-flex xs12 md6 class="title pb-4" v-html="item.position"></v-flex>
+              <v-flex xs12 md6 class="title pb-4" v-html="item.date"></v-flex>
               <v-flex xs12 md5 class="subheadline pb-4 justifyText" v-html="item.description"></v-flex>
               <v-flex xs12 md1></v-flex>
               <v-flex xs12 md6 class="subheadline pb-4 justifyText" v-html="item.skills"></v-flex>
@@ -41,7 +41,7 @@ export default {
         {
           name: 'Tugesto',
           date: '02/2018 – Now',
-          dateCalc: '7 months',
+          dateCalc: '9 months',
           position: '<b>Team leader</b>',
           description: 'Programmer of web pages as <b>full stack developer</b> and <b>team leader</b> in important projects. One project was create a <b>dashboard</b> of statistics for the clients.',
           skills: '<b>Tools and technologies</b>: <b>PHP</b>, <b>Laravel</b>, Lumen, <b>VueJs</b>, <b>Nuxt</b>, Node, Npm, Yarn, SASS, CSS3, HTML5, API Rest, MySQL, GIT and <b>UX/IU</b> (material design).',
