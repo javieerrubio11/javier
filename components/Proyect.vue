@@ -28,7 +28,7 @@
 
           <v-divider></v-divider>
 
-          <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
+          <v-img v-if="!item.images" :src="item.image" height="300"></v-img>
 
           <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
             <swiper-slide v-for="(item, i) in item.images" :key="i">

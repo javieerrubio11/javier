@@ -34,21 +34,21 @@
           </v-layout>
         </v-flex>
 
-        <v-flex sm12 md6 class="px-2 py-2 pointerAuto z5">
-          <v-card hover>
-            <v-card-title primary-title>
-              <h1 class="headline"><b>Vicente Javier González Llobet</b></h1>
-            </v-card-title>
-            <v-divider/>
-            <v-card-title primary-title>
-              <v-layout column>
-                <h2 class="title pb-2"><b>Address</b>: La Vall d’Uixó, Castellón, España</h2>
-                <h2 class="title pb-2"><b>Age</b>: 24 (05/04/1994)</h2>
-                <h2 class="title pb-2"><b>Email</b>: <a class="black--text link-email" href="mailto:&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></h2>
-              </v-layout>
-            </v-card-title>
-          </v-card>
-        </v-flex>
+        <v-card hover>
+          <v-card-title primary-title>
+            <h1 class="headline"><b>Vicente Javier González Llobet</b></h1>
+          </v-card-title>
+          <v-divider/>
+          <v-card-title primary-title>
+            <v-layout column>
+              <h2 class="title pb-2"><b>Address</b>: La Vall d’Uixó, Castellón, España</h2>
+              <h2 class="title pb-2"><b>Age</b>: 24 (05/04/1994)</h2>
+              <h2 class="title pb-2"><b>Email</b>: <a class="black--text link-email" href="mailto:&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></h2>
+            </v-layout>
+          </v-card-title>
+        </v-card>
+
+        <v-flex></v-flex>
 
         <v-flex xs12 class="py-5">
           <v-layout row wrap justify-center>
@@ -72,6 +72,9 @@
             </span>
           </v-layout>
         </v-flex>
+
+        <v-rating v-model="rating"></v-rating>
+
       </v-layout>
     </v-container>
   </div>
@@ -90,6 +93,7 @@ export default {
         { level: 4, name: 'Spring', image: 'image/skills/spring.png' },
         { level: 4, name: 'Laravel', image: 'image/skills/laravel.jpg' },
       ],
+      rating: 3,
     }
   },
 
