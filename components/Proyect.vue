@@ -6,39 +6,38 @@
       <v-flex xs12 md6 pa-2 v-for="(item, index) in proyect" :key="index">
         <v-card hover>
 
-            <v-card-title primary-title style="position: relative;">
-              <v-layout row wrap>
-                <v-flex xs12 class="py-2">
-                  <h3 class="headline"><b>{{item.name}}</b> ({{item.date}})</h3>
-                </v-flex>
+          <v-card-title primary-title style="position: relative;">
+            <v-layout row wrap>
+              <v-flex xs12 class="py-2">
+                <h3 class="headline"><b>{{item.name}}</b> ({{item.date}})</h3>
+              </v-flex>
 
-                <v-flex xs12>
-                  <p class="title">
-                    <b>Technologies</b>: {{item.technologies}}
-                  </p>
-                </v-flex>
+              <v-flex xs12>
+                <p class="title">
+                  <b>Technologies</b>: {{item.technologies}}
+                </p>
+              </v-flex>
 
-                <span class="py-2" v-if="item.link">
-                  <v-btn :href="item.link" target="_blank" color="secondary" round bottom right absolute style="z-index: 2;">
-                    <v-icon left>link</v-icon> Link
-                  </v-btn>
-                </span>
+              <span class="py-2" v-if="item.link">
+                <v-btn :href="item.link" target="_blank" color="secondary" round bottom right absolute style="z-index: 2;">
+                  <v-icon left>link</v-icon> Link
+                </v-btn>
+              </span>
+            </v-layout>
+          </v-card-title>
+
+          <v-divider></v-divider>
+
+          <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
+
+          <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
+            <swiper-slide v-for="(item, i) in item.images" :key="i">
+              <v-layout rwo justify-center>
+                <img class="autoSizeImage" :src="item"/>
               </v-layout>
-            </v-card-title>
-
-            <v-divider/>
-
-            <v-card-media v-if="!item.images" :src="item.image" height="300"></v-card-media>
-
-            <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
-              <swiper-slide v-for="(item, i) in item.images" :key="i">
-                <v-layout rwo justify-center>
-                  <img class="autoSizeImage" :src="item"/>
-                </v-layout>
-              </swiper-slide>
-              <div class="swiper-pagination" slot="pagination"></div>
-            </swiper>
-
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+          </swiper>
 
           <v-divider></v-divider>
 
