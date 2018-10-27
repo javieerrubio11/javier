@@ -12,12 +12,6 @@
                 <h3 class="headline"><b>{{item.name}}</b> ({{item.date}})</h3>
               </v-flex>
 
-              <v-flex xs12>
-                <p class="title">
-                  <b>Technologies</b>: {{item.technologies}}
-                </p>
-              </v-flex>
-
               <span class="py-2" v-if="item.link">
                 <v-btn :href="item.link" target="_blank" color="secondary" round bottom right absolute style="z-index: 2;">
                   <v-icon left>link</v-icon> Link
@@ -28,6 +22,7 @@
 
           <v-divider></v-divider>
 
+          <!-- Media -->
           <v-img v-if="!item.images" :src="item.image" height="300"></v-img>
 
           <swiper :options="swiperOption2" ref="mySwiper3" v-if="item.images">
@@ -43,8 +38,10 @@
 
           <v-card-title primary-title class="justifyText">
             <v-layout column>
-              <div class="title pb-1"><b>Description</b></div>
-              <div class="subheadline" v-html="item.description"></div>
+              <div class="title pb-2"><b>Technologies</b></div>
+              <div class="subheadline pb-3" v-html="item.technologies"></div>
+              <div class="title pb-2"><b>Description</b></div>
+              <div class="subheadline pb-1" v-html="item.description"></div>
             </v-layout>
           </v-card-title>
         </v-card>
