@@ -2,32 +2,46 @@
   <v-container>
     <h2 class="display-2 pb-4">Work Experiencie</h2>
 
-    <div class="py-3" v-for="(item, index) in experiencie" :key="index">
-      <v-card hover>
-        <v-card-title>
-          <v-layout row wrap align-end class="mx-4" align-center>
-            <h3 xs12 class="headline pr-3"><b>{{item.name}}</b></h3>
-            <h4 class="title">({{item.dateCalc}})</h4>
-            <v-flex></v-flex>
-            <img class="autoSizeImage" :src="item.image" :alt="item.name">
-          </v-layout>
-        </v-card-title>
+    <v-timeline
+      :dense="device == 'xs' || device == 'sm'"
+    >
+      <v-timeline-item
+        v-for="(item, index) in experiencie"
+        :key="index"
+        color="secondary"
+        large
+      >
+        <span
+          slot="opposite"
+          :class="`headline`"
+          v-text="item.date"
+        ></span>
 
-        <v-divider></v-divider>
-
-        <v-card-title class="mx-4">
-          <v-layout align-center>
-            <v-layout row wrap>
-              <v-flex xs12 md6 class="title pb-4" v-html="item.position"></v-flex>
-              <v-flex xs12 md6 class="title pb-4" v-html="item.date"></v-flex>
-              <v-flex xs12 md5 class="subheadline pb-4 justifyText" v-html="item.description"></v-flex>
-              <v-flex xs12 md1></v-flex>
-              <v-flex xs12 md6 class="subheadline pb-4 justifyText" v-html="item.skills"></v-flex>
+        <v-card hover>
+          <v-card-title>
+            <v-layout row wrap align-end class="mx-4" align-center>
+              <h3 xs12 class="headline pr-3"><b>{{item.name}}</b></h3>
+              <v-flex></v-flex>
+              <img class="autoSizeImage" :src="item.image" :alt="item.name">
             </v-layout>
-          </v-layout>
-        </v-card-title>
-      </v-card>
-    </div>
+          </v-card-title>
+
+          <v-divider></v-divider>
+
+          <v-card-title class="mx-4">
+            <v-layout align-center>
+              <v-layout row wrap>
+                <v-flex xs12 md6 class="title pb-4" v-html="item.position"></v-flex>
+                <v-flex xs12 md6 class="title pb-4 hidden-sm-and-down" v-html="item.dateCalc"></v-flex>
+                <v-flex xs12 class="title pb-4 hidden-md-and-up" v-html="'<b>' + item.date + '</b> (' + item.dateCalc + ')'"></v-flex>
+                <v-flex xs12 class="subheadline pb-4 justifyText" v-html="item.description"></v-flex>
+                <v-flex xs12 class="subheadline pb-4 justifyText" v-html="item.skills"></v-flex>
+              </v-layout>
+            </v-layout>
+          </v-card-title>
+        </v-card>
+      </v-timeline-item>
+    </v-timeline>
 
   </v-container>
 </template>
@@ -68,6 +82,10 @@ export default {
       ],
 
     }
+  },
+
+  computed: {
+    device () { return this.$vuetify.breakpoint.name },
   },
 
 }
