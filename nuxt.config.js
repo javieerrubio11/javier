@@ -40,7 +40,9 @@ module.exports = {
   },
 
   css: [
-    '~/assets/main.css'
+    { src: '~/assets/main.css' },
+    { src: '@mdi/font/css/materialdesignicons.css' },
+    { src: 'material-design-icons-iconfont/dist/material-design-icons.css' },
   ],
 
   plugins: [
