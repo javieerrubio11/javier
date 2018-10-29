@@ -23,7 +23,7 @@
     </no-ssr>
 
     <v-container class="pointerNone">
-      <v-layout justify-center row>
+      <v-layout justify-center row class="py-4">
 
         <v-flex xs12 sm10 md8 lg6 class="py-5">
           <v-card hover class="positionRelative pt-5">
@@ -49,76 +49,59 @@
         </v-flex>
       </v-layout>
 
-      <v-layout align-center class="py-4">
+      <v-card class="pa-2">
+        <v-layout align-center>
 
-        <v-flex xs12 md6 class="py-3 px-2">
-          <v-card>
-            <v-card-title>
-              <p>
-                Bienvenidos, mi nombre es <b>Vicente Javier González Llobet</b> y soy <b>ingeniero informático</b> desde 2016 por la Universidad Jaume I.
-              </p>
-              <p>
-                Estoy especializado en el desarrollo web como full stack developer. Sin embargo, me gusta ampliar mis horizontes constantemente. Un ejemplo de ello es el <b>Master en Sistemas Inteligentes</b> realizado en la Universidad Jaume I en el año 2017.
-              </p>
-              <p>
-                En el trabajo me gusta escapar de mis zonas de comfort apostando siempre por nuevas tecnologías, metodologías y patrones dentro de la ingeniería del software. Mi principal premisa es que cada día sea un nuevo reto y de esta forma mejorar como profesional.
-              </p>
-            </v-card-title>
-          </v-card>
-        </v-flex>
+          <!-- Description -->
+          <v-flex xs12 md6 class="pa-3 justifyText">
+            <p>
+              Bienvenidos, mi nombre es <b>Vicente Javier González Llobet</b> y soy <b>ingeniero informático</b> desde 2016 por la Universidad Jaume I.
+            </p>
+            <p>
+              Estoy especializado en el desarrollo web como full stack developer. Sin embargo, me gusta ampliar mis horizontes constantemente. Un ejemplo de ello es el <b>Master en Sistemas Inteligentes</b> realizado en la Universidad Jaume I en el año 2017.
+            </p>
+            <p>
+              En el trabajo me gusta escapar de mis zonas de comfort apostando siempre por nuevas tecnologías, metodologías y patrones dentro de la ingeniería del software. Mi principal premisa es que cada día sea un nuevo reto y de esta forma mejorar como profesional.
+            </p>
+          </v-flex>
 
-        <!-- <v-flex xs12 md6 class="py-3 px-2">
-          <v-layout row wrap justify-center>
-            <v-flex xs12 class="display-1 pb-2">
-              <v-layout justify-center>
-                <h2 class="pointerAuto z5 display-1">
-                  Main Skills
-                </h2>
+          <v-divider vertical />
+
+          <!-- Main skills -->
+          <v-flex xs12 md6 class="pa-3">
+            <v-layout row wrap justify-center class="pointerAuto">
+              <v-layout align-center column class="pa-2" v-for="item in skills" :key="item.name">
+                <v-tooltip bottom>
+                  <v-progress-circular
+                    :rotate="270"
+                    :size="100"
+                    :width="10"
+                    :value="item.level * 20"
+                    color="primary darken-2"
+                    slot="activator"
+                  >
+                    <v-avatar size="90" color="white">
+                      <img :src="item.image">
+                    </v-avatar>
+                  </v-progress-circular>
+                  <span>{{item.name}}</span>
+                </v-tooltip>
+
+                <v-rating
+                  v-model="item.level"
+                  :full-icon="'code'"
+                  :empty-icon="'code'"
+                  :readonly="true"
+                  color="primary darken-2"
+                  background-color="grey"
+                  size="17"
+                  dense
+                ></v-rating>
               </v-layout>
-            </v-flex>
-            <span class="pa-3 pointerAuto" v-for="item in skills" :key="item.name">
-              <v-tooltip bottom>
-                <span>{{item.name}}</span>
-                <v-badge slot="activator" right overlap :color="'primary darken-' + (item.level - 1)">
-                  <span slot="badge">{{item.level}}</span>
-                  <v-avatar size="100">
-                    <img :src="item.image" :alt="item.name">
-                  </v-avatar>
-                </v-badge>
-              </v-tooltip>
-            </span>
-          </v-layout>
-        </v-flex> -->
-
-        <v-flex xs12 md6 class="py-3 px-2">
-          <v-layout row wrap justify-center class="pointerAuto">
-            <v-layout align-center column class="pa-2" v-for="item in skills" :key="item.name">
-              <v-progress-circular
-                :rotate="270"
-                :size="100"
-                :width="10"
-                :value="item.level * 20"
-                color="primary darken-2"
-              >
-                <v-avatar size="90" color="white">
-                  <img :src="item.image">
-                </v-avatar>
-              </v-progress-circular>
-
-              <v-rating
-                v-model="item.level"
-                :full-icon="'code'"
-                :empty-icon="'code'"
-                :readonly="true"
-                color="primary darken-2"
-                background-color="grey lighten-2"
-                size="16"
-                dense
-              ></v-rating>
             </v-layout>
-          </v-layout>
-        </v-flex>
-      </v-layout>
+          </v-flex>
+        </v-layout>
+      </v-card>
 
     </v-container>
   </div>
