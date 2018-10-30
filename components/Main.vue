@@ -22,7 +22,7 @@
       </vue-particles>
     </no-ssr>
 
-    <v-container class="pointerNone">
+    <v-container class="pointerAuto">
       <v-layout justify-center row class="py-4">
 
         <v-flex xs12 sm10 md8 lg6 class="py-5">
@@ -32,24 +32,29 @@
             </v-avatar>
 
             <v-card-title primary-title>
-              <v-spacer/>
-              <h1 class="headline pt-2"><b>Vicente Javier González Llobet</b></h1>
-              <v-spacer/>
-            </v-card-title>
-
-            <v-divider/>
-
-            <v-card-title primary-title>
-              <v-layout column>
-                <h2 class="title pb-2"><b>Full Stack Web Developer</b></h2>
-                <h2 class="title pb-2"><b><a class="black--text link-email" href="mailto:&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></b></h2>
+              <v-layout column align-center>
+                <h1 class="headline pt-3 primary--text text--darken-3"><b>Vicente Javier González Llobet</b></h1>
+                <h2 class="title pt-2 primary--text text--darken-2"><b>Full Stack Web Developer</b></h2>
               </v-layout>
             </v-card-title>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn flat color="primary darken-2" icon @click="dialog = true">
+                <v-icon>email</v-icon>
+              </v-btn>
+              <v-btn flat color="primary darken-2" icon target="_blank" href="https://github.com/javieerrubio11">
+                <v-icon>mdi-github-circle</v-icon>
+              </v-btn>
+              <v-btn flat color="primary darken-2" icon target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
+                <v-icon>mdi-linkedin</v-icon>
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
 
-      <v-card class="pa-2">
+      <v-card hover class="pa-2 pointerAuto">
         <v-layout align-center>
 
           <!-- Description -->
@@ -69,7 +74,7 @@
 
           <!-- Main skills -->
           <v-flex xs12 md6 class="pa-3">
-            <v-layout row wrap justify-center class="pointerAuto">
+            <v-layout row wrap justify-center>
               <v-layout align-center column class="pa-2" v-for="item in skills" :key="item.name">
                 <v-tooltip bottom>
                   <v-progress-circular
@@ -103,6 +108,21 @@
         </v-layout>
       </v-card>
 
+      <v-dialog v-model="dialog" max-width="500px">
+        <v-card>
+          <v-card-title>
+            <div class="headline">Email</div>
+            <v-spacer></v-spacer>
+            <v-btn icon @click="dialog = false">
+              <v-icon>close</v-icon>
+            </v-btn>
+          </v-card-title>
+          <v-card-title>
+            <div class="title pb-2"><b>&#106;&#97;&#118;&#105;&#101;&#101;&#114;&#114;&#117;&#98;&#105;&#111;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</b></div>
+          </v-card-title>
+        </v-card>
+      </v-dialog>
+
     </v-container>
   </div>
 </template>
@@ -120,12 +140,11 @@ export default {
         { level: 4, name: 'Spring', image: 'image/skills/spring.png' },
         { level: 4, name: 'Laravel', image: 'image/skills/laravel.jpg' },
       ],
-      rating: 3,
+      dialog: false,
     }
   },
 
   methods: {
-
   }
 
 }

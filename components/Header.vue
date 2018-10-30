@@ -2,7 +2,7 @@
   <span>
     <v-toolbar
       fixed
-      :class="[(hoverToolbar || xsOrSm) ? 'primary darken-1' : 'transparent']"
+      :class="[(hoverToolbar || xsOrSm) ? 'primary darken-2' : 'transparent']"
       dark
       height="60"
       flat
