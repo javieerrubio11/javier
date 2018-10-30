@@ -17,8 +17,9 @@
     </v-layout>
 
     <v-layout>
-      <v-flex xs6 v-for="(category, index) in categoryList" :key="index">
-        <h3 class="display-1 py-3">{{category.name}}</h3>
+      <v-spacer/>
+      <v-flex xs6 lg5 v-for="(category, index) in categoryList" :key="index">
+        <h3 class="display-1 py-4">{{category.name}}</h3>
         <v-layout wrap justify-center>
           <v-chip outline color="white" v-for="(item, index) in filterName(orderByLevelName(skills), search, category.type)" :key="index" class="ma-2 ownChip">
             <v-badge left :color="'primary darken-' + (item.level - 1)">
@@ -33,6 +34,7 @@
           </v-chip>
         </v-layout>
       </v-flex>
+      <v-spacer/>
     </v-layout>
 
   </v-container>
