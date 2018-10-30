@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-4">Certification</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Certification</h2>
 
     <v-expansion-panel popout>
       <v-expansion-panel-content class="pa-2" v-for="(item, index) in certification" :key="index">

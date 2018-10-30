@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-4">Proyects</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Proyects</h2>
 
     <v-layout row wrap>
       <v-flex xs12 md6 pa-2 v-for="(item, index) in proyect" :key="index">

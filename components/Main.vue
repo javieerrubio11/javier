@@ -23,7 +23,7 @@
     </no-ssr>
 
     <v-container class="pointerAuto">
-      <v-layout justify-center row class="py-4">
+      <v-layout justify-center row class="py-5">
 
         <v-flex xs12 sm10 md8 lg6 class="py-5">
           <v-card hover class="positionRelative pt-5">
@@ -73,7 +73,7 @@
         <v-layout align-center :row="!xsOrSm" :column="xsOrSm">
 
           <!-- Description -->
-          <v-flex xs12 md6 class="pa-3 justifyText">
+          <v-flex xs12 md6 class="pa-3 subheading justifyText">
             <p>
               Welcome, my name is <b>Vicente Javier González Llobet</b> and I am a <b>computer engineer</b> since 2016 by the Universitat Jaume I.
             </p>
