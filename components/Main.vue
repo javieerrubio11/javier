@@ -187,7 +187,7 @@ export default {
       boxes: [
         { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: '/' },
         { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: '/' },
-        { store: 'experience', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: '/' },
+        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: '/' },
         { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: '/' },
       ],
       dialog: false,
@@ -199,6 +199,7 @@ export default {
     experience: function () { return this.$store.state.experiencie },
     skillsGlobal: function () { return this.$store.state.skills },
     proyects: function () { return this.$store.state.proyects },
+    articles: function() { return this.$store.state.blog.list }
   },
 
   methods: {

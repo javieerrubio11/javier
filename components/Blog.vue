@@ -2,12 +2,30 @@
   <v-container>
     <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Blog</h2>
 
+    <v-layout row wrap>
+      <v-flex xs12 sm6 lg4 xl3 pa-2 v-for="(item, index) in articles" :key="index">
+        <v-card>
+          <v-card-title>
+            <div class="headline">{{item.title.rendered}}</div>
+          </v-card-title>
+
+          <v-card-title>
+            <div class="justifyText" v-html="item.excerpt.rendered"></div>
+          </v-card-title>
+
+          <v-card-actions>
+            <v-spacer/>
+            <v-btn outline color="secondary" target="_blank" :href="item.link">
+              View more
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
 
   data() {
@@ -16,15 +34,12 @@ export default {
     }
   },
 
-  mounted() {
-    this.loadData()
+  computed: {
+    articles: function() { return this.$store.state.blog.list }
   },
 
-  methods: {
-    async loadData() {
-      let data = await axios.get('http://tecnoxperiencia.com/wp-json/wp/v2/posts?author=1')
-      console.log(data)
-    },
+  mounted() {
+    this.$store.dispatch('blog/get')
   },
 
 }

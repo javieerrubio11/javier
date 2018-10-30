@@ -6,6 +6,7 @@ export const state = () => ({
     { anchor: 'section-4', name: 'Skill', color: 'green', icon: 'filter_5' },
     { anchor: 'section-5', name: 'Proyect', color: 'amber', icon: 'dashboard' },
     { anchor: 'section-6', name: 'Github', color: 'lime', icon: 'mdi-github-circle' },
+    { anchor: 'section-7', name: 'Blog', color: 'indigo', icon: 'book' },
   ],
 
   experiencie: [

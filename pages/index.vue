@@ -22,11 +22,12 @@ import Experiencie from '~/components/Experiencie.vue'
 import Proyect from '~/components/Proyect.vue'
 import Main from '~/components/Main.vue'
 import Github from '~/components/Github.vue'
+import Blog from '~/components/Blog.vue'
 
 export default {
 
   components: {
-    Skill, Certification, Experiencie, Proyect, Main, Github
+    Skill, Certification, Experiencie, Proyect, Main, Github, Blog
   },
 
   computed: {
