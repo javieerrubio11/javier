@@ -60,13 +60,13 @@
           <!-- Description -->
           <v-flex xs12 md6 class="pa-3 justifyText">
             <p>
-              Bienvenidos, mi nombre es <b>Vicente Javier González Llobet</b> y soy <b>ingeniero informático</b> desde 2016 por la Universidad Jaume I.
+              Welcome, my name is <b>Vicente Javier González Llobet</b> and I am a <b>computer engineer</b> since 2016 by the Universitat Jaume I.
             </p>
             <p>
-              Estoy especializado en el desarrollo web como full stack developer. Sin embargo, me gusta ampliar mis horizontes constantemente. Un ejemplo de ello es el <b>Master en Sistemas Inteligentes</b> realizado en la Universidad Jaume I en el año 2017.
+              I'm specialized in web development as a full stack developer. However, I like to expand my limits constantly. An example of this is the <b>Master in Intelligent Systems</b> achieved at the Universitat Jaume I in 2017.
             </p>
             <p>
-              En el trabajo me gusta escapar de mis zonas de comfort apostando siempre por nuevas tecnologías, metodologías y patrones dentro de la ingeniería del software. Mi principal premisa es que cada día sea un nuevo reto y de esta forma mejorar como profesional.
+              At work I like to escape from my comfort zones always betting on new technologies, methodologies and patterns within software engineering. My main premise is that each day is a new challenge and in this way improve as a professional.
             </p>
           </v-flex>
 
