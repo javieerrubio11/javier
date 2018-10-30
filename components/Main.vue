@@ -26,102 +26,106 @@
       <v-layout justify-center row class="py-5">
 
         <v-flex xs12 sm10 md8 lg6 class="py-5">
-          <v-card hover class="positionRelative pt-5">
-            <v-avatar size="150" class="card-image-position">
-              <img src="image/javier.png" alt="Javier">
-            </v-avatar>
+          <v-hover>
+            <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 16 : 4}`" class="positionRelative pt-5">
+              <v-avatar size="150" class="card-image-position">
+                <img src="image/javier.png" alt="Javier">
+              </v-avatar>
 
-            <v-card-title primary-title>
-              <v-layout column align-center>
-                <h1 class="headline text-uppercase pt-4 primary--text text--darken-3"><b>Vicente Javier González Llobet</b></h1>
-                <h2 class="title text-uppercase pt-2 primary--text text--darken-2"><b>Full Stack Web Developer</b></h2>
-              </v-layout>
-            </v-card-title>
+              <v-card-title primary-title>
+                <v-layout column align-center>
+                  <h1 class="headline text-uppercase pt-4 primary--text text--darken-3"><b>Vicente Javier González Llobet</b></h1>
+                  <h2 class="title text-uppercase pt-2 primary--text text--darken-2"><b>Full Stack Web Developer</b></h2>
+                </v-layout>
+              </v-card-title>
 
-            <v-card-actions class="pt-4">
-              <v-spacer></v-spacer>
-              <v-tooltip bottom>
-                <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="file/v-javier-gonzalez(cv-en).pdf">
-                  <v-icon large>mdi-file-pdf</v-icon>
-                </v-btn>
-                <span>CV</span>
-              </v-tooltip>
-              <v-tooltip bottom>
-                <v-btn slot="activator" flat large color="primary darken-2" icon @click="dialog = true">
-                  <v-icon large>email</v-icon>
-                </v-btn>
-                <span>Email</span>
-              </v-tooltip>
-              <v-tooltip bottom>
-                <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="https://github.com/javieerrubio11">
-                  <v-icon large>mdi-github-circle</v-icon>
-                </v-btn>
-                <span>Github</span>
-              </v-tooltip>
-              <v-tooltip bottom>
-                <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
-                  <v-icon large>mdi-linkedin</v-icon>
-                </v-btn>
-                <span>LinkedIn</span>
-              </v-tooltip>
-            </v-card-actions>
-          </v-card>
+              <v-card-actions class="pt-4">
+                <v-spacer></v-spacer>
+                <v-tooltip bottom>
+                  <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="file/v-javier-gonzalez(cv-en).pdf">
+                    <v-icon large>mdi-file-pdf</v-icon>
+                  </v-btn>
+                  <span>CV</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <v-btn slot="activator" flat large color="primary darken-2" icon @click="dialog = true">
+                    <v-icon large>email</v-icon>
+                  </v-btn>
+                  <span>Email</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="https://github.com/javieerrubio11">
+                    <v-icon large>mdi-github-circle</v-icon>
+                  </v-btn>
+                  <span>Github</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
+                    <v-icon large>mdi-linkedin</v-icon>
+                  </v-btn>
+                  <span>LinkedIn</span>
+                </v-tooltip>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
         </v-flex>
       </v-layout>
 
-      <v-card hover class="pa-2 pointerAuto">
-        <v-layout align-center :row="!xsOrSm" :column="xsOrSm">
+      <v-hover>
+        <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 16 : 4}`" class="pa-2 pointerAuto">
+          <v-layout align-center :row="!xsOrSm" :column="xsOrSm">
 
-          <!-- Description -->
-          <v-flex xs12 md6 class="pa-3 subheading justifyText">
-            <p>
-              Welcome, my name is <b>Vicente Javier González Llobet</b> and I am a <b>computer engineer</b> since 2016 by the Universitat Jaume I.
-            </p>
-            <p>
-              I'm specialized in web development as a full stack developer. However, I like to expand my limits constantly. An example of this is the <b>Master in Intelligent Systems</b> achieved at the Universitat Jaume I in 2017.
-            </p>
-            <p>
-              At work I like to escape from my comfort zones always betting on new technologies, methodologies and patterns within software engineering. My main premise is that each day is a new challenge and in this way improve as a professional.
-            </p>
-          </v-flex>
+            <!-- Description -->
+            <v-flex xs12 md6 class="pa-3 subheading justifyText">
+              <p>
+                Welcome, my name is <b>Vicente Javier González Llobet</b> and I am a <b>computer engineer</b> since 2016 by the Universitat Jaume I.
+              </p>
+              <p>
+                I'm specialized in web development as a full stack developer. However, I like to expand my limits constantly. An example of this is the <b>Master in Intelligent Systems</b> achieved at the Universitat Jaume I in 2017.
+              </p>
+              <p>
+                At work I like to escape from my comfort zones always betting on new technologies, methodologies and patterns within software engineering. My main premise is that each day is a new challenge and in this way improve as a professional.
+              </p>
+            </v-flex>
 
-          <v-divider vertical />
+            <v-divider vertical />
 
-          <!-- Main skills -->
-          <v-flex xs12 md6 class="pa-3">
-            <v-layout row wrap justify-center>
-              <v-layout align-center column class="pa-2" v-for="item in skills" :key="item.name">
-                <v-tooltip bottom>
-                  <v-progress-circular
-                    :rotate="270"
-                    :size="100"
-                    :width="10"
-                    :value="item.level * 20"
-                    color="primary darken-2"
-                    slot="activator"
-                  >
-                    <v-avatar size="90" color="white">
-                      <img :src="item.image">
-                    </v-avatar>
-                  </v-progress-circular>
-                  <span>{{item.name}}</span>
-                </v-tooltip>
+            <!-- Main skills -->
+            <v-flex xs12 md6 class="pa-3">
+              <v-layout row wrap justify-center>
+                <v-layout align-center column class="pa-2" v-for="item in skills" :key="item.name">
+                  <v-tooltip bottom>
+                    <v-progress-circular
+                      :rotate="270"
+                      :size="100"
+                      :width="10"
+                      :value="item.level * 20"
+                      color="primary darken-2"
+                      slot="activator"
+                    >
+                      <v-avatar size="90" color="white">
+                        <img :src="item.image">
+                      </v-avatar>
+                    </v-progress-circular>
+                    <span>{{item.name}}</span>
+                  </v-tooltip>
 
-                <v-rating
-                  v-model="item.level"
-                  :full-icon="'code'"
-                  :empty-icon="'code'"
-                  :readonly="true"
-                  color="primary darken-3"
-                  background-color="grey"
-                  size="20"
-                  dense
-                ></v-rating>
+                  <v-rating
+                    v-model="item.level"
+                    :full-icon="'code'"
+                    :empty-icon="'code'"
+                    :readonly="true"
+                    color="primary darken-3"
+                    background-color="grey"
+                    size="20"
+                    dense
+                  ></v-rating>
+                </v-layout>
               </v-layout>
-            </v-layout>
-          </v-flex>
-        </v-layout>
-      </v-card>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-hover>
 
       <v-dialog v-model="dialog" max-width="500px">
         <v-card>

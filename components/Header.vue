@@ -25,7 +25,7 @@
         </v-btn>
       </v-toolbar-items>
 
-      <span class="px-1">
+      <!-- <span class="px-1">
         <v-btn icon large target="_blank" href="https://github.com/javieerrubio11">
           <v-icon large>mdi-github-circle</v-icon>
         </v-btn>
@@ -34,7 +34,7 @@
         <v-btn icon large target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
           <v-icon large>mdi-linkedin</v-icon>
         </v-btn>
-      </span>
+      </span> -->
     </v-toolbar>
 
     <v-navigation-drawer
