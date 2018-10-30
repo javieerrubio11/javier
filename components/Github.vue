@@ -24,30 +24,16 @@
 
           <v-card-title primary-title>
             <v-layout row wrap align-center justify-center>
-              <v-chip v-for="(language, key, index) in item.languages" :key="index" color="secondary lighten-5">
-                <!-- <v-avatar color="primary">
-                  {{ (language * 100 / item.language_total_size).toFixed(1)}}%
-                </v-avatar> -->
+              <v-chip color="secondary lighten-5" v-for="(language, key, index) in languages[item.id]" :key="index">
                 {{key}}
               </v-chip>
-              <!-- <span class="pa-1" v-for="(language, key, index) in item.languages" :key="index">
-                <v-progress-circular
-                  :size="70"
-                  :width="5"
-                  :value="calculePercent(language, item)"
-                  color="primary"
-                >
-                  <span class="caption">
-                    {{ key }}
-                  </span>
-                </v-progress-circular>
-              </span> -->
             </v-layout>
           </v-card-title>
 
           <v-card-actions>
             <v-btn flat outline color="primary" block target="_blank" :href="item.html_url">Go</v-btn>
           </v-card-actions>
+
         </v-card>
       </v-flex>
     </v-layout>
@@ -56,13 +42,14 @@
 
 <script>
 import axios from 'axios'
+import Vue from 'vue'
 
 export default {
 
   data() {
     return {
       repos: {},
-      languages: [],
+      languages: {},
     }
   },
 
@@ -80,22 +67,12 @@ export default {
       // Languages repo data
       for(let i = 0; i < this.repos.length; i++) {
         let element = this.repos[i]
-        let languages = await axios.get(element.languages_url)
-        element.languages = languages.data
 
-        let total = 0
-        for (var property in languages.data) {
-          if (languages.data.hasOwnProperty(property)) {
-              total += languages.data[property]
-          }
-        }
-        element.language_total_size = total
+        let languages = await axios.get(element.languages_url)
+        Vue.set(this.languages, element.id, languages.data)
       }
     },
 
-    calculePercent(value, item) {
-      return value * 100 / item.language_total_size
-    }
   },
 
 }
