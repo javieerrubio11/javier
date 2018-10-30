@@ -52,30 +52,11 @@ export default {
         { name: 'Front', type: 'f' },
         { name: 'Back', type: 'b' },
       ],
-      skills: [
-        { level: 5, name: 'Java', type: 'b', image: 'image/skills/java.png' },
-        { level: 4, name: 'PHP', type: 'b', image: 'image/skills/php.png' },
-        { level: 4, name: 'Laravel', type: 'b', image: 'image/skills/laravel.jpg' },
-        { level: 4, name: 'Spring', type: 'b', image: 'image/skills/spring.png' },
-        { level: 4, name: 'Hibernate', type: 'b', image: 'image/skills/hibernate.png' },
-        { level: 5, name: 'Webservice', type: 'b', image: 'image/skills/wsdl.png' },
-        { level: 4, name: 'WSDL', type: 'b', image: 'image/skills/wsdl.png' },
-        { level: 3, name: 'HL7', type: 'b', image: 'image/skills/hl7.jpg' },
-        { level: 4, name: 'GIT', type: 'b', image: 'image/skills/git.png' },
-        { level: 4, name: 'SQL', type: 'b', image: 'image/skills/sql.png' },
-
-        { level: 5, name: 'JavaScript', type: 'f', image: 'image/skills/javascript.png' },
-        { level: 4, name: 'HTML5', type: 'f', image: 'image/skills/html5.png' },
-        { level: 4, name: 'CSS3', type: 'f', image: 'image/skills/css3.png' },
-        { level: 3, name: 'Sass', type: 'f', image: 'image/skills/sass.png' },
-        { level: 4, name: 'Npm', type: 'f', image: 'image/skills/npm.png' },
-        { level: 3, name: 'Yarn', type: 'f', image: 'image/skills/yarn.png' },
-        { level: 3, name: 'Node', type: 'f', image: 'image/skills/node.png' },
-        { level: 4, name: 'VueJs', type: 'f', image: 'image/skills/vuejs.png' },
-        { level: 4, name: 'AngularJs', type: 'f', image: 'image/skills/angularjs2.png' },
-        { level: 4, name: 'jQuery', type: 'f', image: 'image/skills/jquery.png' },
-      ],
     }
+  },
+
+  computed: {
+    skills: function () { return this.$store.state.skills },
   },
 
   methods: {

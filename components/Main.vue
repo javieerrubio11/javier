@@ -1,5 +1,5 @@
 <template>
-  <div class="positionRelative">
+  <div class="positionRelative pb-0">
     <no-ssr>
       <vue-particles
         color="#dedede"
@@ -22,7 +22,7 @@
       </vue-particles>
     </no-ssr>
 
-    <v-container class="pointerAuto">
+    <v-container class="pointerAuto pb-5">
       <v-layout justify-center row class="py-5">
 
         <v-flex xs12 sm10 md8 lg6 class="py-5">
@@ -143,6 +143,31 @@
       </v-dialog>
 
     </v-container>
+
+    <v-layout row wrap class="pt-5">
+      <v-flex xs12 sm6 lg3 v-for="(item, index) in boxes" :key="index">
+          <v-card flat :color="item.color" dark>
+            <v-card-title class="pa-5">
+              <v-layout align-center column>
+                <v-icon class="pa-3" size="80">{{item.icon}}</v-icon>
+
+                <div class="pa-3 display-3 white--text">
+                  {{item.text}}{{returnStore(item.store)}}
+                </div>
+
+                <v-divider/>
+
+                <span class="pa-3">
+                  <v-btn color="secondary" @click="dialog = true">
+                    {{item.btnText}}
+                  </v-btn>
+                </span>
+              </v-layout>
+            </v-card-title>
+          </v-card>
+      </v-flex>
+    </v-layout>
+
   </div>
 </template>
 
@@ -159,15 +184,29 @@ export default {
         { level: 4, name: 'Spring', image: 'image/skills/spring.png' },
         { level: 4, name: 'Laravel', image: 'image/skills/laravel.jpg' },
       ],
+      boxes: [
+        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: '/' },
+        { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: '/' },
+        { store: 'experience', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: '/' },
+        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: '/' },
+      ],
       dialog: false,
     }
   },
 
   computed: {
     xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
+    experience: function () { return this.$store.state.experiencie },
+    skillsGlobal: function () { return this.$store.state.skills },
+    proyects: function () { return this.$store.state.proyects },
   },
 
   methods: {
+    returnStore: function(store) {
+      if(!store)
+        return null;
+      return this[store].length
+    },
   }
 
 }
