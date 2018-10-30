@@ -38,19 +38,19 @@
               </v-layout>
             </v-card-title>
 
-            <v-card-actions>
+            <v-card-actions class="pt-3">
               <v-spacer></v-spacer>
               <v-btn flat color="primary darken-2" icon target="_blank" href="file/v-javier-gonzalez(cv-en).pdf">
-                <v-icon>mdi-file-pdf</v-icon>
+                <v-icon large>mdi-file-pdf</v-icon>
               </v-btn>
               <v-btn flat color="primary darken-2" icon @click="dialog = true">
-                <v-icon>email</v-icon>
+                <v-icon large>email</v-icon>
               </v-btn>
               <v-btn flat color="primary darken-2" icon target="_blank" href="https://github.com/javieerrubio11">
-                <v-icon>mdi-github-circle</v-icon>
+                <v-icon large>mdi-github-circle</v-icon>
               </v-btn>
               <v-btn flat color="primary darken-2" icon target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
-                <v-icon>mdi-linkedin</v-icon>
+                <v-icon large>mdi-linkedin</v-icon>
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -100,9 +100,9 @@
                   :full-icon="'code'"
                   :empty-icon="'code'"
                   :readonly="true"
-                  color="primary darken-2"
+                  color="primary darken-3"
                   background-color="grey"
-                  size="17"
+                  size="20"
                   dense
                 ></v-rating>
               </v-layout>
