@@ -55,7 +55,7 @@
       </v-layout>
 
       <v-card hover class="pa-2 pointerAuto">
-        <v-layout align-center>
+        <v-layout :row="!xsOrSm" :column="xsOrSm">
 
           <!-- Description -->
           <v-flex xs12 md6 class="pa-3 justifyText">
@@ -144,6 +144,10 @@ export default {
     }
   },
 
+  computed: {
+    xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
+  },
+
   methods: {
   }
 
@@ -156,7 +160,7 @@ export default {
   }
 
   .fullScreen {
-    height: 120%;
+    height: 110%;
     width: 100%;
   }
 
