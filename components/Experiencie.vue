@@ -3,7 +3,7 @@
     <h2 class="display-2 pb-4">Work Experiencie</h2>
 
     <v-timeline
-      :dense="device == 'xs' || device == 'sm'"
+      :dense="xsOrSm"
     >
       <v-timeline-item
         v-for="(item, index) in experiencie"
@@ -85,7 +85,7 @@ export default {
   },
 
   computed: {
-    device () { return this.$vuetify.breakpoint.name },
+    xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
   },
 
 }

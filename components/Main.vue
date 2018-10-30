@@ -40,6 +40,9 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
+              <v-btn flat color="primary darken-2" icon target="_blank" href="file/v-javier-gonzalez(cv-en).pdf">
+                <v-icon>mdi-file-pdf</v-icon>
+              </v-btn>
               <v-btn flat color="primary darken-2" icon @click="dialog = true">
                 <v-icon>email</v-icon>
               </v-btn>
