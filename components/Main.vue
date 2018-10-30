@@ -33,32 +33,44 @@
 
             <v-card-title primary-title>
               <v-layout column align-center>
-                <h1 class="headline pt-3 primary--text text--darken-3"><b>Vicente Javier González Llobet</b></h1>
-                <h2 class="title pt-2 primary--text text--darken-2"><b>Full Stack Web Developer</b></h2>
+                <h1 class="headline text-uppercase pt-4 primary--text text--darken-3"><b>Vicente Javier González Llobet</b></h1>
+                <h2 class="title text-uppercase pt-2 primary--text text--darken-2"><b>Full Stack Web Developer</b></h2>
               </v-layout>
             </v-card-title>
 
-            <v-card-actions class="pt-3">
+            <v-card-actions class="pt-4">
               <v-spacer></v-spacer>
-              <v-btn flat color="primary darken-2" icon target="_blank" href="file/v-javier-gonzalez(cv-en).pdf">
-                <v-icon large>mdi-file-pdf</v-icon>
-              </v-btn>
-              <v-btn flat color="primary darken-2" icon @click="dialog = true">
-                <v-icon large>email</v-icon>
-              </v-btn>
-              <v-btn flat color="primary darken-2" icon target="_blank" href="https://github.com/javieerrubio11">
-                <v-icon large>mdi-github-circle</v-icon>
-              </v-btn>
-              <v-btn flat color="primary darken-2" icon target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
-                <v-icon large>mdi-linkedin</v-icon>
-              </v-btn>
+              <v-tooltip bottom>
+                <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="file/v-javier-gonzalez(cv-en).pdf">
+                  <v-icon large>mdi-file-pdf</v-icon>
+                </v-btn>
+                <span>CV</span>
+              </v-tooltip>
+              <v-tooltip bottom>
+                <v-btn slot="activator" flat large color="primary darken-2" icon @click="dialog = true">
+                  <v-icon large>email</v-icon>
+                </v-btn>
+                <span>Email</span>
+              </v-tooltip>
+              <v-tooltip bottom>
+                <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="https://github.com/javieerrubio11">
+                  <v-icon large>mdi-github-circle</v-icon>
+                </v-btn>
+                <span>Github</span>
+              </v-tooltip>
+              <v-tooltip bottom>
+                <v-btn slot="activator" flat large color="primary darken-2" icon target="_blank" href="https://www.linkedin.com/in/vicente-javier-gonz%C3%A1lez-llobet-89a771117/">
+                  <v-icon large>mdi-linkedin</v-icon>
+                </v-btn>
+                <span>LinkedIn</span>
+              </v-tooltip>
             </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
 
       <v-card hover class="pa-2 pointerAuto">
-        <v-layout :row="!xsOrSm" :column="xsOrSm">
+        <v-layout align-center :row="!xsOrSm" :column="xsOrSm">
 
           <!-- Description -->
           <v-flex xs12 md6 class="pa-3 justifyText">
