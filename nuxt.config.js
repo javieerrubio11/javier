@@ -43,6 +43,7 @@ module.exports = {
     { src: '~/assets/main.css' },
     { src: '@mdi/font/css/materialdesignicons.css' },
     { src: 'material-design-icons-iconfont/dist/material-design-icons.css' },
+    { src: 'animate.css/animate.min.css' },
   ],
 
   plugins: [

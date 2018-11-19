@@ -149,7 +149,14 @@
           <v-card flat :color="item.color" dark>
             <v-card-title class="pa-5">
               <v-layout align-center column>
-                <v-icon class="pa-3" size="80">{{item.icon}}</v-icon>
+                <div @mouseenter="item.over = true" @mouseleave="item.over = false">
+                  <v-icon
+                    :class="[ 'pa-3', (item.over) ? 'animated flip' : '']"
+                    size="80"
+                  >
+                    {{item.icon}}
+                  </v-icon>
+                </div>
 
                 <div class="pa-3 display-3 white--text">
                   {{item.text}}{{returnStore(item.store)}}
@@ -185,15 +192,19 @@ export default {
         { level: 4, name: 'Laravel', image: 'image/skills/laravel.jpg' },
       ],
       boxes: [
-        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: 'section-3' },
-        { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: 'section-5' },
-        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: 'section-7' },
-        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: 'section-4' },
+        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: 'section-3', over: false },
+        { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: 'section-5', over: false },
+        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: 'section-7', over: false },
+        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: 'section-4', over: false },
       ],
       dialog: false,
+
+      // Options scroll
       duration: 600,
       offset: 0,
       easing: 'easeInOutCubic',
+
+      over: false,
     }
   },
 
