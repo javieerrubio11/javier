@@ -158,7 +158,7 @@
                 <v-divider/>
 
                 <span class="pa-3">
-                  <v-btn color="secondary" @click="dialog = true">
+                  <v-btn color="secondary" @click="$vuetify.goTo('#'+item.btnDirection, options);">
                     {{item.btnText}}
                   </v-btn>
                 </span>
@@ -185,12 +185,15 @@ export default {
         { level: 4, name: 'Laravel', image: 'image/skills/laravel.jpg' },
       ],
       boxes: [
-        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: '/' },
-        { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: '/' },
-        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: '/' },
-        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: '/' },
+        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: 'section-3' },
+        { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: 'section-5' },
+        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: 'section-7' },
+        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: 'section-4' },
       ],
       dialog: false,
+      duration: 600,
+      offset: 0,
+      easing: 'easeInOutCubic',
     }
   },
 
@@ -199,7 +202,14 @@ export default {
     experience: function () { return this.$store.state.experiencie },
     skillsGlobal: function () { return this.$store.state.skills },
     proyects: function () { return this.$store.state.proyects },
-    articles: function() { return this.$store.state.blog.list }
+    articles: function() { return this.$store.state.blog.list },
+    options () {
+      return {
+        duration: this.duration,
+        offset: this.offset,
+        easing: this.easing
+      }
+    },
   },
 
   methods: {
