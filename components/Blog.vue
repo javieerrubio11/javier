@@ -6,7 +6,7 @@
       <v-flex xs12 sm6 lg4 xl3 pa-2 v-for="(item, index) in articles" :key="index">
         <v-card>
           <v-card-title>
-            <div class="headline">{{item.title.rendered}}</div>
+            <div class="headline" v-html="item.title.rendered"></div>
           </v-card-title>
 
           <v-card-title>
@@ -14,9 +14,12 @@
           </v-card-title>
 
           <v-card-actions>
+            <v-chip outline small color="blue darken-3">
+               <v-icon left>date_range</v-icon>{{ item.date | spanishDate }}
+             </v-chip>
             <v-spacer/>
             <v-btn outline color="secondary" target="_blank" :href="item.link">
-              View more
+              Read more
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -26,6 +29,8 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
 
   data() {
@@ -41,6 +46,13 @@ export default {
   mounted() {
     this.$store.dispatch('blog/get')
   },
+
+  filters: {
+    spanishDate: function (value) {
+      if (!value) return ''
+      return moment(value).format('DD/MM/YYYY');
+    }
+  }
 
 }
 </script>
