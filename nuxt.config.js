@@ -52,6 +52,7 @@ module.exports = {
     { src: '~/plugins/ga.js', ssr: false },
     { src: '~/plugins/particle', ssr: false },
     { src: '~/plugins/chat', ssr: false },
+    { src: '~/plugins/icountup', ssr: false },
   ],
 
   modules: [

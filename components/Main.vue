@@ -159,7 +159,7 @@
                 </div>
 
                 <div class="pa-3 display-3 white--text">
-                  {{item.text}}{{returnStore(item.store)}}
+                  {{item.text}}<ICountUp :duration="5" :endVal="returnStore(item.store)"/>
                 </div>
 
                 <v-divider/>
