@@ -193,7 +193,7 @@ export default {
       ],
       boxes: [
         { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: 'section-3', over: false },
-        { store: 'proyects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View proyects', btnDirection: 'section-5', over: false },
+        { store: 'projects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View projects', btnDirection: 'section-5', over: false },
         { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: 'section-7', over: false },
         { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: 'section-4', over: false },
       ],
@@ -212,7 +212,7 @@ export default {
     xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
     experience: function () { return this.$store.state.experiencie },
     skillsGlobal: function () { return this.$store.state.skills },
-    proyects: function () { return this.$store.state.proyects },
+    projects: function () { return this.$store.state.projects },
     articles: function() { return this.$store.state.blog.list },
     options () {
       return {

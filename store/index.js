@@ -4,7 +4,7 @@ export const state = () => ({
     { anchor: 'section-2', name: 'Certification', color: 'green', icon: 'book' },
     { anchor: 'section-3', name: 'Experiencie', color: 'blue', icon: 'work' },
     { anchor: 'section-4', name: 'Skill', color: 'green', icon: 'filter_5' },
-    { anchor: 'section-5', name: 'Proyect', color: 'amber', icon: 'dashboard' },
+    { anchor: 'section-5', name: 'Project', color: 'amber', icon: 'dashboard' },
     { anchor: 'section-6', name: 'Github', color: 'lime', icon: 'mdi-github-circle' },
     { anchor: 'section-7', name: 'Blog', color: 'indigo', icon: 'book' },
   ],
@@ -142,7 +142,7 @@ export const state = () => ({
     { level: 4, name: 'jQuery', type: 'f', image: 'image/skills/jquery.png' },
   ],
 
-  proyects: [
+  projects: [
     {
       name: 'Datathon Cajamar',
       date: '2017',

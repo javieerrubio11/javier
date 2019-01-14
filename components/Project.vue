@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Proyects</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Projects</h2>
 
     <v-layout row wrap>
-      <v-flex xs12 md6 pa-2 v-for="(item, index) in proyects" :key="index">
+      <v-flex xs12 md6 pa-2 v-for="(item, index) in projects" :key="index">
         <v-card hover>
 
           <v-card-title primary-title style="position: relative;">
@@ -55,7 +55,7 @@ export default {
 
   computed: {
     breakpoint: function () { return this.$vuetify.breakpoint },
-    proyects: function () { return this.$store.state.proyects },
+    projects: function () { return this.$store.state.projects },
   },
 
   data() {
