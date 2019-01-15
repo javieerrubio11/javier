@@ -7,14 +7,13 @@
       bottom
       right
       fab
-      large
       flat
       @click="$vuetify.goTo(target, options)"
       v-scroll="onScroll"
       v-show="fab"
       class="positionButton"
     >
-      <v-icon class="pt-3">keyboard_arrow_up</v-icon>
+      <v-icon>keyboard_arrow_up</v-icon>
     </v-btn>
   </v-fab-transition>
 </template>
