@@ -35,6 +35,13 @@
           <v-icon large>mdi-linkedin</v-icon>
         </v-btn>
       </span> -->
+
+      <v-select
+          v-model="locale"
+          :items="locales"
+          label="Language"
+          solo-inverted
+      ></v-select>
     </v-toolbar>
 
     <v-navigation-drawer
@@ -93,8 +100,17 @@ export default {
   },
 
   computed: {
-    sections: function () {
-      return this.$store.state.sections
+    sections: function () { return this.$store.state.sections },
+    locales: function () { return this.$store.state.locales },
+    locale: {
+      get: function () {
+        return this.$store.state.locale
+      },
+      set: function (newValue) {
+        // Set locale
+        this.$store.commit('SET_LANG', newValue)
+        this._i18n.locale = this.$store.state.locale
+      }
     },
     xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
     options () {
@@ -103,6 +119,12 @@ export default {
         offset: this.offset,
         easing: this.easing
       }
+    },
+  },
+
+  methods: {
+    setLocale(locale) {
+
     },
   },
 

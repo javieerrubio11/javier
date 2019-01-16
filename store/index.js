@@ -1,4 +1,7 @@
 export const state = () => ({
+  locales: ['en', 'fr'],
+  locale: 'en',
+
   sections: [
     { anchor: 'section-1', name: 'Main', color: 'teal', icon: 'home' },
     { anchor: 'section-2', name: 'Certification', color: 'green', icon: 'book' },
@@ -168,3 +171,11 @@ export const state = () => ({
     },
   ],
 })
+
+export const mutations = {
+  SET_LANG(state, locale) {
+    if (state.locales.indexOf(locale) !== -1) {
+      state.locale = locale
+    }
+  }
+}

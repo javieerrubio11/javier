@@ -16,10 +16,12 @@ module.exports = {
     ],
     script: [ ],
   },
+
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
   /*
   ** Build configuration
   */
@@ -48,6 +50,7 @@ module.exports = {
 
   plugins: [
     { src: '~/plugins/vuetify' },
+    { src: '~/plugins/i18n' },
     { src: '~/plugins/swiper', ssr: false },
     { src: '~/plugins/ga.js', ssr: false },
     { src: '~/plugins/particle', ssr: false },
