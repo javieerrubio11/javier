@@ -36,12 +36,56 @@
         </v-btn>
       </span> -->
 
-      <v-select
+      <!-- <v-select
           v-model="locale"
           :items="locales"
           label="Language"
           solo-inverted
-      ></v-select>
+      ></v-select> -->
+
+      <v-toolbar-items>
+        <v-menu
+          attach
+          bottom
+          left
+          offset-y
+        >
+          <v-btn
+            slot="activator"
+            :aria-label="'locale'"
+            flat
+            style="min-width: 48px"
+          >
+            <v-img
+              v-if="locale"
+              :src="`image/locales/${locale}.png`"
+              width="25px"
+            />
+          </v-btn>
+          <v-list
+            dense
+            light
+          >
+            <v-list-tile
+              v-for="(language, i) in locales"
+              :key="i"
+              avatar
+              @click="setLocale(language.code)"
+            >
+              <v-list-tile-avatar
+                tile
+                size="24px"
+              >
+                <v-img
+                  :src="`image/locales/${language.code}.png`"
+                  width="25px"
+                />
+              </v-list-tile-avatar>
+              <v-list-tile-title v-text="language.name"/>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
+      </v-toolbar-items>
     </v-toolbar>
 
     <v-navigation-drawer
@@ -108,8 +152,7 @@ export default {
       },
       set: function (newValue) {
         // Set locale
-        this.$store.commit('SET_LANG', newValue)
-        this._i18n.locale = this.$store.state.locale
+        this.setLocale(newValue)
       }
     },
     xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
@@ -124,7 +167,8 @@ export default {
 
   methods: {
     setLocale(locale) {
-
+      this.$store.commit('SET_LANG', locale)
+      this._i18n.locale = locale
     },
   },
 
