@@ -1,8 +1,17 @@
 {
   "header": {
-    "language": {
+    "languages": {
       "en": "English",
       "es": "Spanish"
+    },
+    "sections": {
+      "main": "Home",
+      "certifications": "Certifications",
+      "experience": "Experience",
+      "skills": "Skills",
+      "projects": "Projects",
+      "github": "Github",
+      "blog": "Blog"
     }
   }
 }

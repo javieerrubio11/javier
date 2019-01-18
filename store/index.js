@@ -1,18 +1,18 @@
 export const state = () => ({
   locales: [
-    { code: 'en', name: 'header.language.en' },
-    { code: 'es', name: 'header.language.es' }
+    { code: 'en', name: 'header.languages.en' },
+    { code: 'es', name: 'header.languages.es' }
   ],
   locale: 'es',
 
   sections: [
-    { anchor: 'section-1', name: 'Main', color: 'teal', icon: 'home' },
-    { anchor: 'section-2', name: 'Certification', color: 'green', icon: 'book' },
-    { anchor: 'section-3', name: 'Experiencie', color: 'blue', icon: 'work' },
-    { anchor: 'section-4', name: 'Skill', color: 'green', icon: 'filter_5' },
-    { anchor: 'section-5', name: 'Project', color: 'amber', icon: 'dashboard' },
-    { anchor: 'section-6', name: 'Github', color: 'lime', icon: 'mdi-github-circle' },
-    { anchor: 'section-7', name: 'Blog', color: 'indigo', icon: 'book' },
+    { anchor: 'section-1', section: 'Main', name: 'header.sections.main', color: 'teal', icon: 'home' },
+    { anchor: 'section-2', section: 'Certification', name: 'header.sections.certifications', color: 'green', icon: 'book' },
+    { anchor: 'section-3', section: 'Experiencie', name: 'header.sections.experience', color: 'blue', icon: 'work' },
+    { anchor: 'section-4', section: 'Skill', name: 'header.sections.skills', color: 'green', icon: 'filter_5' },
+    { anchor: 'section-5', section: 'Project', name: 'header.sections.projects', color: 'amber', icon: 'dashboard' },
+    { anchor: 'section-6', section: 'Github', name: 'header.sections.github', color: 'lime', icon: 'mdi-github-circle' },
+    { anchor: 'section-7', section: 'Blog', name: 'header.sections.blog', color: 'indigo', icon: 'book' },
   ],
 
   experiencie: [

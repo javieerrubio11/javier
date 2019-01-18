@@ -9,7 +9,7 @@
       :id="item.anchor"
       class="section-index"
     >
-      <component v-bind:is="item.name"></component>
+      <component v-bind:is="item.section"></component>
     </v-flex>
 
   </v-layout>

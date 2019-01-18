@@ -19,7 +19,7 @@
 
       <v-toolbar-items class="hidden-sm-and-down" id="menu-header">
         <v-btn flat v-for="(item, index) in sections" :key="index" active-class @click="$vuetify.goTo('#'+item.anchor, options)">
-          {{item.name}}
+          {{ $t(item.name) }}
         </v-btn>
       </v-toolbar-items>
 
@@ -62,7 +62,7 @@
           </v-list-tile-action>
 
           <v-list-tile-content>
-            <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+            <v-list-tile-title>{{ $t(item.name) }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
