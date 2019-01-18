@@ -78,15 +78,9 @@
 
             <!-- Description -->
             <v-flex xs12 md6 class="pa-3 subheading justifyText">
-              <p>
-                Welcome, my name is <b>Vicente Javier González Llobet</b> and I am a <b>computer engineer</b> since 2016 by the Universitat Jaume I.
-              </p>
-              <p>
-                I'm specialized in web development as a full stack developer. However, I like to expand my limits constantly. An example of this is the <b>Master in Intelligent Systems</b> achieved at the Universitat Jaume I in 2017.
-              </p>
-              <p>
-                At work I like to escape from my comfort zones always betting on new technologies, methodologies and patterns within software engineering. My main premise is that each day is a new challenge and in this way improve as a professional.
-              </p>
+              <p v-html="$t('main.description.p1')"></p>
+              <p v-html="$t('main.description.p2')"></p>
+              <p v-html="$t('main.description.p3')"></p>
             </v-flex>
 
             <v-divider vertical />
@@ -211,7 +205,7 @@ export default {
 
   computed: {
     xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
-    experience: function () { return this.$store.state.experiencie },
+    experience: function () { return this.$store.state.experience },
     skillsGlobal: function () { return this.$store.state.skills },
     projects: function () { return this.$store.state.projects },
     articles: function() { return this.$store.state.blog.list },

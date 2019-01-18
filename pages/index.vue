@@ -18,7 +18,7 @@
 <script>
 import Skill from '~/components/Skill.vue'
 import Certification from '~/components/Certification.vue'
-import Experiencie from '~/components/Experiencie.vue'
+import Experience from '~/components/Experience.vue'
 import Project from '~/components/Project.vue'
 import Main from '~/components/Main.vue'
 import Github from '~/components/Github.vue'
@@ -27,7 +27,7 @@ import Blog from '~/components/Blog.vue'
 export default {
 
   components: {
-    Skill, Certification, Experiencie, Project, Main, Github, Blog
+    Skill, Certification, Experience, Project, Main, Github, Blog
   },
 
   computed: {

@@ -8,22 +8,22 @@ export const state = () => ({
   sections: [
     { anchor: 'section-1', section: 'Main', name: 'header.sections.main', color: 'teal', icon: 'home' },
     { anchor: 'section-2', section: 'Certification', name: 'header.sections.certifications', color: 'green', icon: 'book' },
-    { anchor: 'section-3', section: 'Experiencie', name: 'header.sections.experience', color: 'blue', icon: 'work' },
+    { anchor: 'section-3', section: 'Experience', name: 'header.sections.experience', color: 'blue', icon: 'work' },
     { anchor: 'section-4', section: 'Skill', name: 'header.sections.skills', color: 'green', icon: 'filter_5' },
     { anchor: 'section-5', section: 'Project', name: 'header.sections.projects', color: 'amber', icon: 'dashboard' },
     { anchor: 'section-6', section: 'Github', name: 'header.sections.github', color: 'lime', icon: 'mdi-github-circle' },
     { anchor: 'section-7', section: 'Blog', name: 'header.sections.blog', color: 'indigo', icon: 'book' },
   ],
 
-  experiencie: [
+  experience: [
     {
       name: 'Tugesto',
       date: '02/2018 – Now',
       dateCalc: '9 months',
       position: '<b>Team leader</b>',
       description: 'Programmer of web pages as <b>full stack developer</b> and <b>team leader</b> in important projects. One project was create a <b>dashboard</b> of statistics for the clients.',
-      skills: '<b>Tools and technologies</b>: <b>PHP</b>, <b>Laravel</b>, Lumen, <b>VueJs</b>, <b>Nuxt</b>, Node, Npm, Yarn, SASS, CSS3, HTML5, API Rest, MySQL, GIT and <b>UX/IU</b> (material design).',
-      image: 'image/experiencie/logo_tugesto.png'
+      skills: '<b>Tools and technologies</b>: <b>PHP</b>, <b>Laravel</b>, Lumen, <b>VueJs</b>, <b>NuxtJs</b>, Yarn, SASS, API Rest, MySQL, GIT and <b>UX/IU</b> (material design).',
+      image: 'image/experience/logo_tugesto.png'
     },
     {
       name: 'INTEGRA Consultores',
@@ -31,8 +31,8 @@ export const state = () => ({
       dateCalc: '2 years and 5 months',
       position: '<b>Full Stack Developer</b>',
       description: 'Programmer of web pages as <b>full stack developer</b>. The project was to work together with the client (Unión de Mutuas) to develop a module of its internal management application. This module was the development of the management <b>clinical history</b> of their patients.',
-      skills: '<b>Tools and technologies</b>: <b>AngularJS</b>, <b>Java</b>, <b>Spring</b>, CSS3, HTML5, Hibernate, HL7, WSDL, API Rest, SQL Server, Jira, GIT and <b>UX/IU</b> (material design).',
-      image: 'image/experiencie/integra.jpg'
+      skills: '<b>Tools and technologies</b>: <b>AngularJS</b>, <b>Java</b>, <b>Spring</b>, Hibernate, HL7, WSDL, API Rest, SQL Server, Jira, GIT and <b>UX/IU</b> (material design).',
+      image: 'image/experience/integra.jpg'
     },
     {
       name: 'Universo Langur',
@@ -40,8 +40,8 @@ export const state = () => ({
       dateCalc: '3 months',
       position: '<b>Full Stack Developer</b>',
       description: 'Programmer of web pages as full stack developer. The project was about adding new features to a hotspot management dashboard.',
-      skills: '<b>Tools and technologies</b>: <b>PHP</b>, <b>CakePhp</b>, MySQL, desarrollo ágil, Jira, GIT, jQuery, HTML5 and CSS3.',
-      image: 'image/experiencie/langur.jpg'
+      skills: '<b>Tools and technologies</b>: <b>PHP</b>, <b>CakePhp</b>, MySQL, Scrum, Jira, GIT, jQuery, HTML5 and CSS3.',
+      image: 'image/experience/langur.jpg'
     },
   ],
 

@@ -1,12 +1,12 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Work Experiencie</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Work Experience</h2>
 
     <v-timeline
       :dense="xsOrSm"
     >
       <v-timeline-item
-        v-for="(item, index) in experiencie"
+        v-for="(item, index) in experience"
         :key="index"
         color="secondary"
         large
@@ -56,7 +56,7 @@ export default {
 
   computed: {
     xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
-    experiencie: function () { return this.$store.state.experiencie },
+    experience: function () { return this.$store.state.experience },
   },
 
 }
