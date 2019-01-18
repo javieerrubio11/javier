@@ -11,7 +11,7 @@
         :aria-label="'locale'"
         flat
         style="min-width: 48px"
-        :title="locale"
+        :title="locale | uppercaseText"
       >
         <v-img
           v-if="locale"
@@ -38,7 +38,7 @@
               width="25px"
             />
           </v-list-tile-avatar>
-          <v-list-tile-title v-text="language.name"/>
+          <v-list-tile-title v-text="$t(language.name)"/>
         </v-list-tile>
       </v-list>
     </v-menu>
@@ -65,6 +65,14 @@ export default {
       this._i18n.locale = locale
     },
   },
+
+  filters: {
+    uppercaseText: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.toUpperCase()
+    }
+  }
 
 }
 </script>

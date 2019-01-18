@@ -1,9 +1,9 @@
 export const state = () => ({
   locales: [
-    { code: 'en', name: 'English' },
-    { code: 'es', name: 'Spain' }
+    { code: 'en', name: 'header.language.en' },
+    { code: 'es', name: 'header.language.es' }
   ],
-  locale: 'en',
+  locale: 'es',
 
   sections: [
     { anchor: 'section-1', name: 'Main', color: 'teal', icon: 'home' },

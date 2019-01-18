@@ -23,7 +23,7 @@
     </no-ssr>
 
     <v-container class="pointerAuto pb-5">
-      <p>{{ $t('home.title') }}</p>
+
       <v-layout justify-center row class="py-5">
 
         <v-flex xs12 sm10 md8 lg6 class="py-5">
