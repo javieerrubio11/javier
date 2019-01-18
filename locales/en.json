@@ -21,6 +21,12 @@
       "p1": "Welcome, my name is <b>Vicente Javier González Llobet</b> and I am a <b>computer engineer</b> since 2016 by the Universitat Jaume I.",
       "p2": "I'm specialized in web development as a full stack developer. However, I like to expand my limits constantly. An example of this is the <b>Master in Intelligent Systems</b> achieved at the Universitat Jaume I in 2017.",
       "p3": "At work I like to escape from my comfort zones always betting on new technologies, methodologies and patterns within software engineering. My main premise is that each day is a new challenge and in this way improve as a professional."
+    },
+    "summary": {
+      "experience": "View experience",
+      "projects": "View projects",
+      "articles": "View articles",
+      "skills": "View skills"
     }
   }
 }

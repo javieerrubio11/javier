@@ -142,7 +142,7 @@ export const state = () => ({
     { level: 3, name: 'Sass', type: 'f', image: 'image/skills/sass.png' },
     { level: 4, name: 'Npm', type: 'f', image: 'image/skills/npm.png' },
     { level: 3, name: 'Yarn', type: 'f', image: 'image/skills/yarn.png' },
-    { level: 3, name: 'Node', type: 'f', image: 'image/skills/node.png' },
+    { level: 3, name: 'NodeJs', type: 'f', image: 'image/skills/node.png' },
     { level: 4, name: 'VueJs', type: 'f', image: 'image/skills/vuejs.png' },
     { level: 4, name: 'AngularJs', type: 'f', image: 'image/skills/angularjs2.png' },
     { level: 4, name: 'jQuery', type: 'f', image: 'image/skills/jquery.png' },

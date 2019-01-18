@@ -161,7 +161,7 @@
 
                 <span class="pa-3">
                   <v-btn color="secondary" @click="$vuetify.goTo('#'+item.btnDirection, options);">
-                    {{item.btnText}}
+                    {{ $t(item.btnText) }}
                   </v-btn>
                 </span>
               </v-layout>
@@ -187,10 +187,10 @@ export default {
         { level: 4, name: 'Laravel', image: 'image/skills/laravel.jpg' },
       ],
       boxes: [
-        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'View experience', btnDirection: 'section-3', over: false },
-        { store: 'projects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'View projects', btnDirection: 'section-5', over: false },
-        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'View articles', btnDirection: 'section-7', over: false },
-        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'View skills', btnDirection: 'section-4', over: false },
+        { store: 'experience', icon: 'work', color: 'blue darken-1', text: '+', btnText: 'main.summary.experience', btnDirection: 'section-3', over: false },
+        { store: 'projects', icon: 'code', color: 'light-blue darken-1', text: '', btnText: 'main.summary.projects', btnDirection: 'section-5', over: false },
+        { store: 'articles', icon: 'book', color: 'cyan darken-1', text: '', btnText: 'main.summary.articles', btnDirection: 'section-7', over: false },
+        { store: 'skillsGlobal', icon: 'playlist_add_check', color: 'teal darken-1', text: '+', btnText: 'main.summary.skills', btnDirection: 'section-4', over: false },
       ],
       dialog: false,
 

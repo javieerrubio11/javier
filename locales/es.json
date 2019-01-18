@@ -21,6 +21,12 @@
       "p1": "Bienvenido, mi nombre es <b>Vicente Javier González Llobet</b> y soy <b>ingeniero informático</b> desde 2016 por la Universitat Jaume I.",
       "p2": "Estoy especializado en desarrollo web como Full Stack Web Developer. Sin embargo, me gusta ampliar mis límites constantemente. Un ejemplo de esto es el <b>Máster en Sistemas Inteligentes</b> obtenido en la Universitat Jaume I en 2017.",
       "p3": "En el trabajo me gusta escapar de mi zona de confort apostando siempre por las nuevas tecnologías, metodologías y patrones dentro de la ingeniería de software. Mi premisa principal es que cada día es un nuevo desafío y, de este modo, mejorar como profesional constantemente."
+    },
+    "summary": {
+      "experience": "Ver experiencia",
+      "projects": "Ver proyectos",
+      "articles": "Ver artículos",
+      "skills": "Ver habilidades"
     }
   }
 }
