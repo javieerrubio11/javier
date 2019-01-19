@@ -32,6 +32,7 @@
 
   "certifications": {
     "master": {
+      "name": "Master in Intelligent Systems",
       "SIU010": "Pattern recognition",
       "SIU012": "Visual perception",
       "SIU021": "Multimodal Interfaces",
@@ -48,9 +49,11 @@
       "SIU038": "Environmental Intelligence",
       "SIU040": "Strategic Information Systems",
       "SIU045": "Machine Learning",
-      "SIU048": "Integration of Heterogeneous Data Sources"
+      "SIU048": "Integration of Heterogeneous Data Sources",
+      "SIU050": "Final Master's Project (Detection of duplicates in a flow of biometric samples)"
     },
     "degree": {
+      "name": "Degree in Computer Engineering",
       "EI1001": "Mathematics I",
       "EI1002": "Basic Computing",
       "EI1003": "Programming I",
@@ -89,6 +92,10 @@
       "EI1049": "Software Engineering Workshop",
       "EI1050": "Agile Methods",
       "EI1054": "External Practices and Final Degree Project"
+    },
+    "school": {
+      "name": "Science and Technology High School",
+      "description": "This was the beginning of my higher studies. At this time I decided to study a <b>technological scientific branch</b>. Therefore, I began to study applied <b>mathematics</b>, <b>physics</b>, <b>industrial technology</b>, etc."
     }
   }
 

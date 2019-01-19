@@ -9,7 +9,7 @@
             <img class="" :src="item.image" alt="avatar">
           </v-avatar>
           <div class="pl-3">
-            <h3 class="headline"><b>{{item.name}}</b></h3>
+            <h3 class="headline"><b>{{ $t(item.name) }}</b></h3>
             <h4 class="title pt-2">{{item.institution}} ({{item.date}})</h4>
           </div>
         </v-layout>
@@ -21,12 +21,12 @@
                 <p class="title">Subjects:</p>
               </v-flex>
               <v-flex class="subheading" xs12 sm4 xl3 px-1 v-for="subject in orderByCode(item.subjects)" :key="subject.code">
-                <span v-if="subject.strong">- <strong>{{subject.title}}</strong></span>
-                <span v-else>- {{subject.title}}</span>
+                <span v-if="subject.strong">- <strong>{{ $t(subject.title) }}</strong></span>
+                <span v-else>- {{ $t(subject.title) }}</span>
               </v-flex>
             </v-layout>
             <v-layout v-else>
-              <p class="title justifyText" v-html="item.description"></p>
+              <p class="title justifyText" v-html=" $t(item.description) "></p>
             </v-layout>
           </v-card-text>
         </v-card>
