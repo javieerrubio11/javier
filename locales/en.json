@@ -28,5 +28,68 @@
       "articles": "View articles",
       "skills": "View skills"
     }
+  },
+
+  "certifications": {
+    "master": {
+      "SIU010": "Pattern recognition",
+      "SIU012": "Visual perception",
+      "SIU021": "Multimodal Interfaces",
+      "SIU027": "Data mining",
+      "SIU043": "Final Master's Project (Detection of duplicates in a flow of biometric samples)",
+      "SIU014": "Modeling and 3D Reconstruction",
+      "SIU020": "Synthesis of Image and Animation",
+      "SIU022": "Virtual and Augmented Reality",
+      "SIU025": "Ontologies and the Semantic Web",
+      "SIU026": "Representation of Knowledge and Reasoning",
+      "SIU029": "Contextual Systems",
+      "SIU035": "Remote Monitoring and Video-Surveillance",
+      "SIU037": "Medical Image",
+      "SIU038": "Environmental Intelligence",
+      "SIU040": "Strategic Information Systems",
+      "SIU045": "Machine Learning",
+      "SIU048": "Integration of Heterogeneous Data Sources"
+    },
+    "degree": {
+      "EI1001": "Mathematics I",
+      "EI1002": "Basic Computing",
+      "EI1003": "Programming I",
+      "EI1004": "Computer Structure",
+      "EI1005": "English",
+      "EI1006": "Mathematics II",
+      "EI1007": "Physical",
+      "EI1008": "Programming II",
+      "EI1009": "Organization and Business Management",
+      "EI1010": "Computer Architecture",
+      "EI1011": "Mathematics expansion",
+      "EI1012": "Statistics and Optimization",
+      "EI1013": "Data structures",
+      "EI1014": "Operating systems",
+      "EI1015": "Introduction to Networks",
+      "EI1016": "Electronics",
+      "EI1017": "Programation advance",
+      "EI1018": "Administration of Operating Systems",
+      "EI1019": "Administration and Network Configuration",
+      "EI1020": "Databases",
+      "EI1021": "Distributed systems",
+      "EI1022": "Algorithmics",
+      "EI1023": "Fundamentals of Software Engineering",
+      "EI1024": "Concurrent and Parallel Programming",
+      "EI1025": "Graphics and Multimedia",
+      "EI1026": "Right of Information Technologies",
+      "EI1027": "Design and Implementation of Information Systems",
+      "EI1028": "Intelligent Systems",
+      "EI1031": "Verification and Validation",
+      "EI1032": "Software Analysis",
+      "EI1035": "Business Initiative",
+      "EI1039": "Software design",
+      "EI1040": "Project Management Software Engineering",
+      "EI1041": "Design and Implementation of Databases",
+      "EI1048": "Software Paradigms",
+      "EI1049": "Software Engineering Workshop",
+      "EI1050": "Agile Methods",
+      "EI1054": "External Practices and Final Degree Project"
+    }
   }
+
 }

@@ -5,7 +5,7 @@
     </v-container>
 
     <v-container fluid>
-      <v-timeline v-if="!xsOrSm">
+      <v-timeline class="hidden-sm-and-down">
         <v-timeline-item
           v-for="(item, index) in experience"
           :key="index"
@@ -44,7 +44,7 @@
         </v-timeline-item>
       </v-timeline>
 
-      <v-layout column v-if="xsOrSm">
+      <v-layout column class="hidden-md-and-up">
         <v-card v-for="(item, index) in experience" :key="index" class="my-2">
           <v-card-title>
             <v-layout row wrap align-end class="mx-4" align-center>
@@ -76,7 +76,6 @@
 <script>
 export default {
   computed: {
-    xsOrSm: function() { return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm },
     experience: function () { return this.$store.state.experience },
   },
 }
