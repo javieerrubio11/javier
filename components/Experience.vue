@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Work Experience</h2>
+      <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">{{ $t('experience.name') }}</h2>
     </v-container>
 
     <v-container fluid>
@@ -21,7 +21,9 @@
           <v-card hover>
             <v-card-title>
               <v-layout row wrap align-end class="mx-4" align-center>
-                <h3 xs12 class="headline pr-3"><b>{{item.name}}</b></h3>
+                <h3 xs12 class="headline pr-3">
+                  <strong>{{item.name}}</strong>
+                </h3>
                 <v-flex></v-flex>
                 <img class="autoSizeImage" :src="item.image" :alt="item.name">
               </v-layout>
@@ -32,11 +34,11 @@
             <v-card-title class="mx-4">
               <v-layout align-center>
                 <v-layout row wrap>
-                  <v-flex xs12 md6 class="title pb-4" v-html="item.position"></v-flex>
-                  <v-flex xs12 md6 class="title pb-4 hidden-sm-and-down" v-html="item.dateCalc"></v-flex>
-                  <v-flex xs12 class="title pb-4 hidden-md-and-up" v-html="'<b>' + item.date + '</b> (' + item.dateCalc + ')'"></v-flex>
-                  <v-flex xs12 class="subheadline pb-4 justifyText" v-html="item.description"></v-flex>
-                  <v-flex xs12 class="subheadline pb-4 justifyText" v-html="item.skills"></v-flex>
+                  <v-flex xs12 md6 class="title pb-4"><strong v-html="$t(item.position)"></strong></v-flex>
+                  <v-flex xs12 md6 class="title pb-4 hidden-sm-and-down" v-html="$t(item.dateCalc)"></v-flex>
+                  <v-flex xs12 class="title pb-4 hidden-md-and-up" v-html="'<b>' + item.date + '</b> (' + $t(item.dateCalc) + ')'"></v-flex>
+                  <v-flex xs12 class="subheadline pb-4 justifyText" v-html="$t(item.description)"></v-flex>
+                  <v-flex xs12 class="subheadline pb-4 justifyText" v-html="$t(item.skills)"></v-flex>
                 </v-layout>
               </v-layout>
             </v-card-title>
@@ -48,7 +50,9 @@
         <v-card v-for="(item, index) in experience" :key="index" class="my-2">
           <v-card-title>
             <v-layout row wrap align-end class="mx-4" align-center>
-              <h3 xs12 class="headline pr-3"><b>{{item.name}}</b></h3>
+              <h3 xs12 class="headline pr-3">
+                <strong>{{item.name}}</strong>
+              </h3>
               <v-flex></v-flex>
               <img class="autoSizeImage" :src="item.image" :alt="item.name">
             </v-layout>
@@ -59,11 +63,11 @@
           <v-card-title class="mx-4">
             <v-layout align-center>
               <v-layout row wrap>
-                <v-flex xs12 md6 class="title pb-4" v-html="item.position"></v-flex>
-                <v-flex xs12 md6 class="title pb-4 hidden-sm-and-down" v-html="item.dateCalc"></v-flex>
-                <v-flex xs12 class="title pb-4 hidden-md-and-up" v-html="'<b>' + item.date + '</b> (' + item.dateCalc + ')'"></v-flex>
-                <v-flex xs12 class="subheadline pb-4 justifyText" v-html="item.description"></v-flex>
-                <v-flex xs12 class="subheadline pb-4 justifyText" v-html="item.skills"></v-flex>
+                <v-flex xs12 md6 class="title pb-4"><strong v-html="$t(item.position)"></strong></v-flex>
+                <v-flex xs12 md6 class="title pb-4 hidden-sm-and-down" v-html="$t(item.dateCalc)"></v-flex>
+                <v-flex xs12 class="title pb-4 hidden-md-and-up" v-html="'<b>' + item.date + '</b> (' + $t(item.dateCalc) + ')'"></v-flex>
+                <v-flex xs12 class="subheadline pb-4 justifyText" v-html="$t(item.description)"></v-flex>
+                <v-flex xs12 class="subheadline pb-4 justifyText" v-html="$t(item.skills)"></v-flex>
               </v-layout>
             </v-layout>
           </v-card-title>

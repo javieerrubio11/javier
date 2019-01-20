@@ -31,6 +31,7 @@
   },
 
   "certifications": {
+    "name": "Títulos",
     "master": {
       "name": "Master en Sistemas Inteligentes",
       "SIU010": "Reconocimiento de Formas",
@@ -96,6 +97,28 @@
     "school": {
       "name": "Bachillerato Científico Tecnológico",
       "description": "Este fue el comienzo de mis estudios superiores. En ese momento decidí estudiar una <b>vertiente científico tecnológica</b>. Por lo tanto, en ese momento comencé a interesarme por las <b>matemáticas</b>, la <b>física</b>, la <b>tecnología industrial</b>, etc."
+    }
+  },
+
+  "experience": {
+    "name": "Experiencia laboral",
+    "tugesto": {
+      "position": "Team leader",
+      "dateCalc": "1 año",
+      "description": "Programador de páginas web como <b>full stack developer</b> y <b> líder de equipo </b> en diferentes proyectos. Uno de los proyectos fue crear un <b>panel de control</b> con gráficos interactivos y totalmente configurable por el usuario.",
+      "skills": "<b>Herramientas y tecnologías</b>: <b>PHP</b>, <b>Laravel</b>, Lumen, <b>VueJs</b>, <b>NuxtJs</b>, Yarn, SASS, API Rest, MySQL, GIT y <b>UX/IU</b> (Material design)."
+    },
+    "integra": {
+      "position": "Full Stack Developer",
+      "dateCalc": "2 años y 5 meses",
+      "description": "Programador de páginas web como <b>full stack developer</b>. El proyecto fue trabajar junto con el cliente (Unión de Mutuas) para desarrollar un módulo de su aplicación de gestión interna. Este módulo consistía en la gestión de la <b>historia clínica</b> de sus pacientes.",
+      "skills": "<b>Herramientas y tecnologías</b>: <b>AngularJS</b>, <b>Java</b>, <b>Spring</b>, Hibernate, HL7, WSDL, API Rest, SQL Server, Jira, GIT y <b>UX/IU</b> (material design)."
+    },
+    "langur": {
+      "position": "Full Stack Developer",
+      "dateCalc": "3 meses",
+      "description": "Programador de páginas web como <b>full stack developer</b>. El proyecto consistía en agregar nuevas funcionalidades a un panel de administración de hotspots.",
+      "skills": "<b>Herramientas y tecnologías</b>: <b>PHP</b>, <b>CakePhp</b>, MySQL, Scrum, Jira, GIT, jQuery, HTML5 y CSS3."
     }
   }
 

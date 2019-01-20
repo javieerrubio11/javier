@@ -31,6 +31,7 @@
   },
 
   "certifications": {
+    "name": "Certifications",
     "master": {
       "name": "Master in Intelligent Systems",
       "SIU010": "Pattern recognition",
@@ -96,6 +97,28 @@
     "school": {
       "name": "Science and Technology High School",
       "description": "This was the beginning of my higher studies. At this time I decided to study a <b>technological scientific branch</b>. Therefore, I began to study applied <b>mathematics</b>, <b>physics</b>, <b>industrial technology</b>, etc."
+    }
+  },
+
+  "experience": {
+    "name": "Work Experience",
+    "tugesto": {
+      "position": "Team leader",
+      "dateCalc": "1 year",
+      "description": "Programmer of web pages as <b>full stack developer</b> and <b>team leader</b> in some projects. One project was create a <b>dashboard</b> with interactive graphs.",
+      "skills": "<b>Tools and technologies</b>: <b>PHP</b>, <b>Laravel</b>, Lumen, <b>VueJs</b>, <b>NuxtJs</b>, Yarn, SASS, API Rest, MySQL, GIT and <b>UX/IU</b> (Material design)."
+    },
+    "integra": {
+      "position": "Full Stack Developer",
+      "dateCalc": "2 years and 5 months",
+      "description": "Programmer of web pages as <b>full stack developer</b>. The project was to work together with the client (Unión de Mutuas) to develop a module of its internal management application. This module was the development of the management <b>clinical history</b> of their patients.",
+      "skills": "<b>Tools and technologies</b>: <b>AngularJS</b>, <b>Java</b>, <b>Spring</b>, Hibernate, HL7, WSDL, API Rest, SQL Server, Jira, GIT and <b>UX/IU</b> (Material design)."
+    },
+    "langur": {
+      "position": "Full Stack Developer",
+      "dateCalc": "3 months",
+      "description": "Programmer of web pages as <b>full stack developer</b>. The project was about adding new features to a hotspot management dashboard.",
+      "skills": "<b>Tools and technologies</b>: <b>PHP</b>, <b>CakePhp</b>, MySQL, Scrum, Jira, GIT, jQuery, HTML5 and CSS3."
     }
   }
 
