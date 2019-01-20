@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Projects</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">{{ $t('projects.name') }}</h2>
 
     <v-layout row wrap>
       <v-flex xs12 md6 pa-2 v-for="(item, index) in projects" :key="index">
@@ -14,7 +14,7 @@
 
               <span class="py-2" v-if="item.link">
                 <v-btn :href="item.link" target="_blank" color="secondary" round bottom right absolute style="z-index: 2;">
-                  <v-icon left>link</v-icon> Link
+                  <v-icon left>link</v-icon> {{ $t('projects.link') }}
                 </v-btn>
               </span>
             </v-layout>
@@ -38,10 +38,14 @@
 
           <v-card-title primary-title class="justifyText">
             <v-layout column>
-              <div class="title pb-2"><b>Technologies</b></div>
-              <div class="subheadline pb-3" v-html="item.technologies"></div>
-              <div class="title pb-2"><b>Description</b></div>
-              <div class="subheadline pb-1" v-html="item.description"></div>
+              <div class="title pb-2">
+                <strong>{{ $t('projects.technologies') }}</strong>
+              </div>
+              <div class="subheadline pb-3" v-html="$t(item.technologies)"></div>
+              <div class="title pb-2">
+                <strong>{{ $t('projects.description') }}</strong>
+              </div>
+              <div class="subheadline pb-1" v-html="$t(item.description)"></div>
             </v-layout>
           </v-card-title>
         </v-card>

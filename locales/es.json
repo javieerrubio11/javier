@@ -120,6 +120,25 @@
       "description": "Programador de páginas web como <b>full stack developer</b>. El proyecto consistía en agregar nuevas funcionalidades a un panel de administración de hotspots.",
       "skills": "<b>Herramientas y tecnologías</b>: <b>PHP</b>, <b>CakePhp</b>, MySQL, Scrum, Jira, GIT, jQuery, HTML5 y CSS3."
     }
+  },
+
+  "skills": {
+    "name": "Habilidades"
+  },
+
+  "projects": {
+    "name": "Proyectos",
+    "technologies": "Tecnologías",
+    "description": "Descripción",
+    "link": "enlace",
+    "datathon2017": {
+      "technologies":  "<p>El objetivo del desafío propuesto en el Datathon era crear una aplicación para mostrar de manera interactiva los datos generados por las transsecciones con tarjeta de crédito de los clientes de Cajamar.</p> <p>El conjunto de datos original contenía el código postal del cliente y el comercio, el sector comercial, la fecha de la transacción, el intervalo de tiempo, el importe y el número de transacciones realizadas. Para obtener una mejor puntuación en el desafío, fue necesario agregar fuentes externas de datos, por lo tanto, agregamos como fuentes externas la <b>climatología</b> que hiczo esos días y el <b>nombre de la población por código postal</b> de la provincia de Valencia. </p>",
+      "description": "Tableau, Knime y Firebase."
+    },
+    "hackathon2016": {
+      "technologies":  "<p>En el Hackathon de Castellón tuvimos 48 horas para resolver uno de los 4 desafíos propuestos. Participamos un grupo de 5 amigos de la universidad y el desafío que elegimos fue <b>crear una aplicación</b> que ayude al usuario a <b>conocer una ciudad de forma interactiva</b>. Para ello, desarrollamos una <b>aplicación multiplataforma</b> con nuevas tecnologías que no habíamos usado anteriormente y así salir de nuestra zona de confort. </p>",
+      "description": "Ionic 2, Angular 2, Typescript, Google maps y Firebase."
+    }
   }
 
 }
