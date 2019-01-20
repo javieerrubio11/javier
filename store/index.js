@@ -1,7 +1,7 @@
 export const state = () => ({
   locales: [
-    { code: 'en', name: 'header.languages.en' },
-    { code: 'es', name: 'header.languages.es' }
+    { code: 'es', name: 'header.languages.es' },
+    { code: 'en', name: 'header.languages.en' }
   ],
   locale: 'es',
 
