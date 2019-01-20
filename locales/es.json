@@ -139,6 +139,14 @@
       "technologies":  "<p>En el Hackathon de Castellón tuvimos 48 horas para resolver uno de los 4 desafíos propuestos. Participamos un grupo de 5 amigos de la universidad y el desafío que elegimos fue <b>crear una aplicación</b> que ayude al usuario a <b>conocer una ciudad de forma interactiva</b>. Para ello, desarrollamos una <b>aplicación multiplataforma</b> con nuevas tecnologías que no habíamos usado anteriormente y así salir de nuestra zona de confort. </p>",
       "description": "Ionic 2, Angular 2, Typescript, Google maps y Firebase."
     }
+  },
+
+  "github": {
+    "name": "Github"
+  },
+
+  "blog": {
+    "name": "Blog"
   }
 
 }

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Skills</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">{{ $t('skills.name') }}</h2>
 
     <v-layout>
       <v-flex></v-flex>

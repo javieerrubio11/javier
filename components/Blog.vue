@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">Blog</h2>
+    <h2 class="display-2 pb-5 text-uppercase primary--text text--darken-4">{{ $t('blog.name') }}</h2>
 
     <v-layout row wrap justify-center>
       <v-flex xs12 sm6 lg4 xl3 pa-2 v-for="(item, index) in articles" :key="index">
