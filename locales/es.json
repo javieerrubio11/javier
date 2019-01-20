@@ -146,7 +146,8 @@
   },
 
   "blog": {
-    "name": "Blog"
+    "name": "Blog",
+    "buttonMore": "Leer más"
   }
 
 }
